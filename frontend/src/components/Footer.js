@@ -5,7 +5,6 @@ function Footer() {
     return <footer> 
         <i> This is the footer </i>
         <p> 2022 Payasas - All Rights Reserved </p>
-        <a href="#"> <i> Admin </i> </a> 
         </footer>
 }
 
