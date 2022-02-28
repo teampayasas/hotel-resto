@@ -1,12 +1,14 @@
 // Functional component
-import React from 'react'
+import React, { useState } from 'react'
+import Login from './LoginForm';
 
 function Nav() {
-    return <nav> 
+    return <nav>
         <a href="#"> Home </a>
         <a href="#"> About Us </a>
-        <a href="#" className='booking'> Book Now </a>
-        <a href="#" className='login'> Login </a>
+        <button className='booking'> Book Now </button>
+        <button className='login'> Login </button>
+        <button className='sign-up'> Sign Up </button>
     </nav>
 }
 
