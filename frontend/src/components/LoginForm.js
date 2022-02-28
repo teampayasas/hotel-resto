@@ -21,7 +21,7 @@ export default function Login() {
     };
 
     return (
-        <form>
+        <form className='login-form'>
             <label> Email: </label> <br/>
             <input type="text" value={values.email} onChange={handleInputChange} name="email"></input> <br/>
             <label> Password: </label> <br/>

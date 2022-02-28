@@ -1,5 +1,4 @@
 // https://codezup.com/forms-in-react-js-example-login-signup-form/#:~:text=When%20we%20talk%20about%20forms%20in%20React%20JS,handlers%20in%20the%20onChange%20attribute%20of%20the%20element.
-import res from 'express/lib/response';
 import React, { useState } from 'react';
 
 function SignUp() {
@@ -48,7 +47,7 @@ function SignUp() {
     }
 
     return (
-    <form onSubmit={(e) => { handleSubmit(e) }} action="/users" method='POST'>
+    <form onSubmit={(e) => { handleSubmit(e) }} action="/users" method='POST' className='sign-up-form'>
         <label > Name: </label> <br />
         <input type="text" value={name} required onChange={(e)=> { handleChange(e) }}/> <br />
         <label> Surname: </label><br />
