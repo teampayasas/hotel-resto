@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css'
 import Cal from './components/calendar';
 import useAlan from './components/alan/hook/useAlan';
@@ -17,13 +17,31 @@ import Booking from './components/BookForm';
 
 function App() {
   // useAlan()
+  const [BookOpen, setBookOpen] = useState(null)
+  const [SignUpOpen, setSignUpOpen] = useState(null)
+  const [LoginOpen, setLoginOpen] = useState(null)
   return (
     <div className="wrapper">
       <Header />
-      <Menu />
-      {/* <SignUp /> */}
-      <Login />
-      {/* <Booking /> */}
+      <nav>
+        <a href="#"> Home </a>
+        <a href="#"> About Us </a>
+        <button className='booking' onClick={() => { if (BookOpen === null) {setBookOpen(<Booking />)}
+        else {
+          setBookOpen(null)
+        }}}> Book Now </button>
+        <button className='login' onClick={() => { if (LoginOpen === null) { setLoginOpen(<Login />)} 
+        else {
+            setLoginOpen(null)
+        }}}> Login </button>
+        <button className='sign-up' onClick={() => { if(SignUpOpen === null) {setSignUpOpen(<SignUp />)}
+        else {
+          setSignUpOpen(null)
+        }}}> Sign Up </button>
+    </nav>
+    {BookOpen}
+    {SignUpOpen}
+    {LoginOpen}
       <Gallery />
       <Content />
       <Footer />
