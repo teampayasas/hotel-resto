@@ -36,13 +36,23 @@ function SignUp() {
             alert('A form was submitted with Name :"' + name + '" ,Surname :"' + surname + '" and Email :"' + email + '"');
         } e.preventDefault();
 
+        const signUpInfo = {
+            name: name,
+            surname: surname,
+            email: email,
+            password: password,
+            user: 'user'
+        }
+        console.log(signUpInfo);
+
         fetch('http://localhost:4000/users', {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             method: 'POST',
-            body: JSON.stringify({name:name, surname:surname, email:email, password:password})
+            // body: JSON.stringify({name:name, surname:surname, email:email, password:password})
+            body: JSON.stringify({signUpInfo})
         })
     }
 
