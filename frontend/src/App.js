@@ -5,7 +5,8 @@ import useAlan from './components/alan/hook/useAlan';
 //Front-end user components
 import Header from './components/Header';
 import Menu from './components/Navmen';
-import Gallery from './components/slider/Slider'
+import Gallery from './components/slider/ImageSlider';
+import { SliderData } from './components/slider/SliderData';
 import Content from './components/Main';
 import Footer from './components/Footer';
 //Forms
@@ -42,7 +43,7 @@ function App() {
     {BookOpen}
     {SignUpOpen}
     {LoginOpen}
-      <Gallery />
+      <Gallery slides={SliderData} />
       <Content />
       <Footer />
 

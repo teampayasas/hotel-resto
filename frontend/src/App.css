@@ -1,17 +1,23 @@
+:root {
+  --orange: #f5b278;
+  --grey: rgb(245, 239, 239);
+  --yellow: #eed7a0;
+
+}
 body {
   background-color: white;
 }
 
 nav, footer {
-  background-color: #f5b278;
+  background-color: var(--orange);
 }
 
-.slider-container, .rooms {
-  background-color: rgb(245, 239, 239);
+.rooms {
+  background-color:  var(--grey);
 }
 
 .overview, form {
-  background-color: #eed7a0;
+  background-color: var(--yellow);
 }
 
 form {
@@ -19,7 +25,7 @@ form {
 }
 
 #logo {
-  width: 65%;
+  width: 30%;
   height: auto;
   padding-top: 10px;
 }
@@ -42,18 +48,12 @@ a:hover {
   text-decoration: underline;
 }
 
-.slides {
-  border: 2px solid black;
-  width: 500px;
-  height: 450px;
-}
-
 .wrapper {
   text-align: center;
 }
 
 .booking, .login, .sign-up {
-  background-color: #f5b278;
+  background-color: var(--orange);
   border: none;
   border-radius: 5%;
   cursor: pointer;
