@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './App.css'
-import Cal from './components/calendar';
-import useAlan from './components/alan/hook/useAlan';
 //Front-end user components
 import Header from './components/Header';
 import Menu from './components/Navmen';

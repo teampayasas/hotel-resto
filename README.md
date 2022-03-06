@@ -1,8 +1,9 @@
 # hotel-resto
 
  - Frontend
+ - [] Payment method -_-
     - react app
-    - calendar
+    [x] calendar
     - Alan
     - Login:
       - User-Backend
