@@ -1,3 +1,10 @@
+// Look onto database and match every character that the user has entered.
+// Retrieve from database and check match
+//indexof('@')
+// Regular expression
+//Patter between /`{}$/
+
+
 import React, { useState } from 'react';
 
 export default function Login() {

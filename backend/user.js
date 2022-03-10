@@ -10,12 +10,14 @@ const User = (app) => {
     client.connect();
     // console.log(client)
 
-    app.get("/users", async (req,res) => {
-        //
-        const cursor = client.db("datesBooked").collection("users").find();
-        const result = await cursor.toArray();
-        console.log(result)
-        res.json(result)
+    app.get('/users', async (req,res) => {
+        const data = await client
+        .db("datesBooked")
+        .collection("users")
+        .find({}).toArray((error, result) => {
+            if(error) throw error
+            res.send(result)
+        })
     })
 
     app.get("/login", async (req,res) => {
@@ -26,7 +28,7 @@ const User = (app) => {
         
         console.log(req.body);
         console.log(result)
-        response.status(200).json(result)
+        res.status(200).json(result)
     })
 
     app.post("/users", async (req, res) => {
