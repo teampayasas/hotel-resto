@@ -51,7 +51,7 @@ function SignUp() {
             alert('A form was submitted with Name :"' + name + '" ,Surname :"' + surname + '" and Email :"' + email + '"');
         } e.preventDefault();
 
-        fetch('http://localhost:4000/users', {
+        fetch('https://eu-west-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-yjsic/service/userData/incoming_webhook/InsertUser', {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
