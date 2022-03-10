@@ -59,6 +59,13 @@ function SignUp() {
             method: 'POST',
             body: JSON.stringify({name:name, surname:surname, email:email, password:password, userRole:'user'})
         })
+
+        setName('');
+        setSurname('');
+        setEmail('');
+        setPassword('');
+        setConfPassword('');
+
     }
 
     return (
