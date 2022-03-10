@@ -15,17 +15,17 @@ function Form() {
     return (
         <section className="form" onSubmit={getValues} >
             <form className="submit-booking">
-                <label> Name </label> <br/>
+                <label for="name"> Name: </label> 
                 <input type="text"></input> <br/>
-                <label> Surname </label> <br/>
+                <label for="surname"> Surname: </label>
                 <input type="text"></input> <br/>
-                <label> Date: </label> <br/>
+                <label for="date"> Date: </label>
                 <input type="date"></input> <br/>
-                <label> Rooms: </label> <br/>
+                <label for="rooms"> Rooms: </label>
                 <input type="number" min="1" step="1"></input> <br/>
-                <label> Adults: </label> <br/>
+                <label for="adults"> Adults: </label>
                 <input type="number" min="1" step="1"></input> <br/>
-                <label> Kids: </label> <br/>
+                <label for="kids"> Kids: </label>
                 <input type="number" min="0" step="0"></input> <br/>
                 <button type="submit"> Book </button>
             </form>

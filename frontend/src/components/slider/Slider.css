@@ -1,6 +1,6 @@
 .slider {
     position: relative;
-    height: 60vh;
+    height: 30vh;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -8,17 +8,17 @@
 }
 
 .image {
-    width: 500px;
+    width: 400px;
     height: auto;
     border-radius: 10px;
 }
 
 .right-arrow {
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 5px;
     font-size: 3rem;
-    color: black;
+    color: rgb(202, 202, 202);
     z-index: 10;
     cursor: pointer;
     user-select: none;
@@ -26,10 +26,10 @@
 
 .left-arrow {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 5px;
     font-size: 3rem;
-    color: black;
+    color: rgb(202, 202, 202);
     z-index: 10;
     cursor: pointer;
     user-select: none;
@@ -44,4 +44,21 @@
     opacity: 2;
     transition-duration: 15s;
     transform: scale(1.08);
+}
+
+@media screen and (min-width: 600px) {
+    
+    .slider {
+        padding-top: 1vh;
+        height: auto;
+    }
+    
+    .image {
+        width: 500px;
+    }
+
+    .right-arrow, .left-arrow {
+        top: 50%;
+        color: black;
+    }
 }

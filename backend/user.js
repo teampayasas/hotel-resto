@@ -18,6 +18,17 @@ const User = (app) => {
         res.json(result)
     })
 
+    app.get("/login", async (req,res) => {
+        const result = await client
+        .db("datesBooked")
+        .collection("users")
+        .findOne(req.body)
+        
+        console.log(req.body);
+        console.log(result)
+        response.status(200).json(result)
+    })
+
     app.post("/users", async (req, res) => {
         const result = await client
         .db("datesBooked")
@@ -37,6 +48,8 @@ const User = (app) => {
         console.log(req.body)
         res.json(req.body)
     })
+
+
 }
 
 export default User;

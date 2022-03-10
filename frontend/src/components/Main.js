@@ -4,7 +4,7 @@ import React from 'react'
 function Main() {
     return <main>
         <section className='overview'> 
-        <i> <b> Hotel Overview </b> </i>
+        <h2> Hotel Overview </h2>
         {/* http://www.whiteskyhospitality.com/blog/wp-content/uploads/2014/11/Reach_Hotel-description-template_V2_FOR-DOWNLOAD.pdf */}
         <p> Set on the peaceful backwaters of Wymouth, this hotel welcomes guests with a beautiful outdoor pool, which overlooks the lake.
             Elegant cottages boasts a private hot tub for guests to relax in. <br />
@@ -21,16 +21,16 @@ function Main() {
         </section>
 
         <section className='rooms'>
-        <i> <b> Rooms </b> </i> <br />
-        <i> Deluxe Room </i>
-        <p>
-        Independent, spacious, luxuriously appointed cottages of 600 sqft with a private sit out overlooking the river.
-        </p> <br />
-        <i> Deluxe Villa </i>
-        <p>
-            The room is equipped with a fireplace, a king size bed, a telephone and an attached bathroom. 
-            The room overlooks the lake.
-        </p>
+        <h2> Rooms </h2>
+        <p> <i> Deluxe Room </i> <br />
+        Independent, spacious, luxuriously appointed 
+        cottages of 600 soft with a private sit out 
+        overlooking the river. <br />
+        
+        <i> Deluxe Villa </i> <br />
+        The room is equipped with a fireplace, a king size 
+        bed, a telephone and an attached bathroom. 
+        The room overlooks the lake. </p>
         </section>
         </main>
 }

@@ -1,31 +1,41 @@
 import React, { useState } from 'react';
 
-// Add default values to all input fields.
-const initialValues = {
-    email: "",
-    password: "",
-}
-
 export default function Login() {
-    const [values, setValues] = useState(initialValues);
 
-    const handleInputChange = (e) => {
-        const {name, value} = e.target;
-    
-        setValues({
-            ...values,
-            [name]: value,
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value)
+    }
+
+    const handleSubmit = (e) => {
+        const LoggedIn = {
+            email: email,
+            password: password
+        }
+        console.log(LoggedIn)
+
+        fetch('http://localhost:4000/login', {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: 'POST',
+            body: JSON.stringify({LoggedIn})
         })
-
-        console.log(value)
-    };
+    }
 
     return (
-        <form className='login-form'>
+        <form onSubmit={(e) => {handleSubmit(e) }} className='login-form' action="/login" method='POST'>
             <label> Email: </label> <br/>
-            <input type="text" value={values.email} onChange={handleInputChange} name="email"></input> <br/>
+            <input type="text" value={email} required onChange={(e) => {handleEmailChange(e)}} name="email"></input> <br/>
             <label> Password: </label> <br/>
-            <input type="password" value={values.password} onChange={handleInputChange} name="password"></input> <br/>
+            <input type="password" value={password} required onChange={(e) => { handlePasswordChange(e) }} name="password"></input> <br/>
             <button type="submit"> Login </button>
         </form>
     )
