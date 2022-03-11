@@ -51,21 +51,36 @@ function SignUp() {
             alert('A form was submitted with Name :"' + name + '" ,Surname :"' + surname + '" and Email :"' + email + '"');
         } e.preventDefault();
 
-        fetch('https://eu-west-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-yjsic/service/userData/incoming_webhook/InsertUser', {
+        fetch('https://eu-west-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-yjsic/service/userData/incoming_webhook/LogInUser', {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             method: 'POST',
-            body: JSON.stringify({name:name, surname:surname, email:email, password:password, userRole:'user'})
+            body: JSON.stringify({email:email})
         })
-
+        
+        .then((response) => response.json())
+        .then((result) => {
+            if (result === null) {
+                fetch('https://eu-west-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-yjsic/service/userData/incoming_webhook/InsertUser', {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    method: 'POST',
+                    body: JSON.stringify({name:name, surname:surname, email:email, password:password, userRole:'user'})
+                })
+            } else {
+                alert('This email is currently in use.')
+            }
+        })
+        
         setName('');
         setSurname('');
         setEmail('');
         setPassword('');
         setConfPassword('');
-
     }
 
     return (
