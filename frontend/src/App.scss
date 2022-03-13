@@ -1,17 +1,51 @@
+body{
+    // background-color: rgb(255, 188, 126);
+    font-family: monospace;
+    margin-left: 0%;
+    margin-right: 0%;
+}
 header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     img{
-        max-height: 200px;
+        max-height: 150px;
     }
     nav{
-        display: flex;
-        justify-content: space-between;
         a{
-            justify-content: space-between;
-    align-items: center;
+            margin-left: 5%;
+
         }
     }
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+    button{
+        border: none;
+        padding: 2%;
+        background-color: white;
+    }
+    :hover{
+        background-color: rgb(236, 236, 236);
+        cursor: pointer;
+    }
+}
+section{
+    padding: 3%;
+}
+.rooms{
+    background-color: rgb(255, 212, 173);
+    padding: 5%;
+}
+.overview{
+    padding: 5%;
+    margin-left: 0%;
+    background-color: rgb(253, 192, 122);
+    // border-radius: 20%;
+}
+footer{
+    text-align: center;
+    padding: 5%;
 }

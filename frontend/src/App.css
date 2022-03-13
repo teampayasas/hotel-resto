@@ -1,3 +1,9 @@
+body {
+  font-family: monospace;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,19 +12,22 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 header img {
-  max-height: 200px;
+  max-height: 150px;
 }
 
-header nav {
+header nav a {
+  margin-left: 5%;
+}
+
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,12 +36,34 @@ header nav {
           justify-content: space-between;
 }
 
-header nav a {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+nav button {
+  border: none;
+  padding: 2%;
+  background-color: white;
 }
-/*# sourceMappingURL=app.css.map */
+
+nav :hover {
+  background-color: #ececec;
+  cursor: pointer;
+}
+
+section {
+  padding: 3%;
+}
+
+.rooms {
+  background-color: #ffd4ad;
+  padding: 5%;
+}
+
+.overview {
+  padding: 5%;
+  margin-left: 0%;
+  background-color: #fdc07a;
+}
+
+footer {
+  text-align: center;
+  padding: 5%;
+}
+/*# sourceMappingURL=App.css.map */

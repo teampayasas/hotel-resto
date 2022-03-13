@@ -23,20 +23,18 @@ function App() {
     <div className="wrapper">
       <Header />
       <nav>
-        <a href="#"> Home </a>
-        <a href="#"> About Us </a>
         <button className='booking' onClick={() => { if (BookOpen === null) {setBookOpen(<Booking />)}
         else {
           setBookOpen(null)
-        }}}> Book Now </button>
+        }}}>BOOK NOW</button>
         <button className='login' onClick={() => { if (LoginOpen === null) { setLoginOpen(<Login />)} 
         else {
             setLoginOpen(null)
-        }}}> Login </button>
+        }}}>LOGIN</button>
         <button className='sign-up' onClick={() => { if(SignUpOpen === null) {setSignUpOpen(<SignUp />)}
         else {
           setSignUpOpen(null)
-        }}}> Sign Up </button>
+        }}}>SIGN-UP</button>
     </nav>
     {BookOpen}
     {SignUpOpen}
