@@ -1,7 +1,12 @@
 body {
+  text-align: justify;
   font-family: monospace;
   margin-left: 0%;
   margin-right: 0%;
+}
+
+body h2 {
+  letter-spacing: 1px;
 }
 
 header {
@@ -62,8 +67,51 @@ section {
   background-color: #fdc07a;
 }
 
+.sectionLayout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.sectionLayout p {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 0%;
+}
+
+.sectionLayout img {
+  max-height: 190px;
+  margin-bottom: 3%;
+}
+
 footer {
   text-align: center;
-  padding: 5%;
+  padding-top: 2%;
 }
-/*# sourceMappingURL=App.css.map */
+
+footer .footerLayout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .footerLayout .fContentLayout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 10%;
+  max-width: 200px;
+}
+/*# sourceMappingURL=app.css.map */
