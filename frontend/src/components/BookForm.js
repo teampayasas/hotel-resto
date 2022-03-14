@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+// import { application } from "express";
 
 function Form() {
     const [name, setName] = useState('');
@@ -7,6 +9,14 @@ function Form() {
     const [rooms, setRooms] = useState('');
     const [adults, setAdults] = useState('');
     const [kids, setKids] = useState('');
+    const [disable, setDisable] = useState(true);
+
+    //Paypal
+    // https://www.unimedia.tech/2021/10/09/paypal-checkout-integration-with-react/
+    const [show, setShow] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [ErrorMessage, setErrorMessage] = useState("");
+    const [orderID, setOrderID] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -20,7 +30,7 @@ function Form() {
             method: 'POST',
             body: JSON.stringify({name:name, surname:surname, date:date, rooms:rooms, adults:adults, kids:kids})
         })
-
+        setDisable(false)
         setName("")
         setSurname("")
         setDate("")
@@ -28,6 +38,45 @@ function Form() {
         setAdults("")
         setKids("")
     }
+
+    //Creates a PayPal order
+    const createOrder = (data, actions) => {
+        return actions.order
+        .create({
+            purchase_units: [{
+                description: "Hotel room",
+                amount: {
+                    currency_code: "USD",
+                    value: 20
+                },
+            }],
+
+            application_context: {
+                shipping_preference: "NO_SHIPPING",
+            },
+        })
+        .then((orderID) => {
+            setOrderID(orderID);
+            return orderID;
+        })
+    };
+    //Check approval
+    const onApprove = (data, actions) => {
+        return actions.order.capture().then(function(details) {
+            const { payer } = details;
+            setSuccess(true);
+        })
+    }
+    //Capture likely errors
+    const onError = (data, actions) => {
+        setErrorMessage("An error occured with your payment");
+    };
+
+    // useEffect(() => {
+    //     if(success) {
+    //         alert('Payment successful :)')
+    //     }
+    // })
 
     return (
         <section className="form">
@@ -45,7 +94,14 @@ function Form() {
                 <label for="kids"> Kids: </label>
                 <input type="number" min="0" step="0" value={kids} onChange={(e) => {setKids(e.target.value)}}></input> <br/>
                 <button type="submit"> Book </button>
+                {/* <button disabled={disable}> Pay </button> */}
+                <PayPalScriptProvider options={{ "client-id": "test" }}>
+                <PayPalButtons disabled={disable} style={{ layout: "horizontal" }} createOrder={createOrder} onApprove={onApprove} />
+                </PayPalScriptProvider>
             </form>
+            {/* <PayPalScriptProvider options={{ "client-id": "test" }}>
+            <PayPalButtons disabled={disable} style={{ layout: "horizontal" }} createOrder={createOrder} onApprove={onApprove} />
+            </PayPalScriptProvider> */}
         </section>
     )
 }
