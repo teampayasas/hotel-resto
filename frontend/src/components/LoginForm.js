@@ -6,6 +6,7 @@
 
 
 import React, { useState } from 'react';
+import AdminPage from '../admin'
 
 export default function Login() {
 
@@ -28,16 +29,20 @@ export default function Login() {
         .then((result) => {
             if (result !== null) {
                 console.log(result)
-                console.log('Logged In :)')
-                console.log(`Welcome ${result.name}`)
+                if (result.userRole === "admin") {
+                    console.log('Welcome admin');
+                    console.log(<AdminPage/>)
+                } if (result.userRole === "user") {
+                    console.log('hola user')
+                }
             } else {
                 console.log('Error logging in :(')
             }
         })
 
 
-        setEmail("")
-        setPassword("")
+        // setEmail("")
+        // setPassword("")
     }
 
     return (

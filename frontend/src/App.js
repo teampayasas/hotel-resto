@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import SignUp from './components/SignUpForm';
 import Login from './components/LoginForm';
 import Booking from './components/BookForm';
+import BookingF from './components/Booking';
 
 
 
@@ -42,6 +43,7 @@ function App() {
     {SignUpOpen}
     {LoginOpen}
       <Gallery slides={SliderData} />
+      {/* <BookingF/> */}
       <Content />
       <Footer />
 
