@@ -4,7 +4,7 @@ import alanBtn from '@alan-ai/alan-sdk-web';
 
 
 export default function useAlan() {
-  console.log("part 1 is working")
+  // console.log("part 1 is working")
   useEffect(() => {
     alanBtn({
       key:  

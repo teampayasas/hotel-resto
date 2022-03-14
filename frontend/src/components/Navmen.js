@@ -10,8 +10,6 @@ function Nav() {
 
     return ( 
     <nav>
-        <a href="#"> Home </a>
-        <a href="#about-us"> About Us </a>
         <button className='booking'> Book Now </button>
         <button className='login' onClick={() => { if (LoginOpen === null) {
             setLoginOpen(<Login />)

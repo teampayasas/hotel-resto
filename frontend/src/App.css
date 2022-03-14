@@ -1,139 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100&display=swap');
-
-:root {
-  --orange: #f5b278;
-  --grey: rgb(245, 239, 239);
-  --yellow: #eed7a0;
-  --navHeaders: 'Quicksand', sans-serif;
-  --regFont: 'Palanquin', sans-serif;
-  --mobileFont: 18px;
-}
-
 body {
-  background-color: var(--grey);
-  font-size: var(--mobileFont);
-  display: inline block;
+  text-align: justify;
+  font-family: monospace;
+  margin-left: 0%;
+  margin-right: 0%;
 }
 
-p {
-  font-family: var(--regFont);
-  font-weight: bold;
+body h2 {
+  letter-spacing: 1px;
 }
 
-h2 {
-  font-family: var(--navHeaders);
-  font-weight: 500;
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-nav, footer {
-  background-color: var(--orange);
-  font-family: var(--navHeaders);
-  font-weight: 600;
+header img {
+  max-height: 150px;
 }
 
-.rooms {
-  background-color:  var(--grey);
-}
-
-.overview, form {
-  background-color: var(--yellow);
-}
-
-#logo {
-  width: 100%;
-  height: auto;
+header nav a {
+  margin-left: 5%;
 }
 
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 5px 5px;
-  /* position: sticky; */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-nav a {
-  text-decoration: none;
-  color: black;
-  /* font-size: 18px; */
-}
-a:hover {
-  text-decoration: underline;
-}
-button {
-  font-family: var(--navHeaders);
-  font-weight: 600;
-  font-size: var(--mobileFont);
-}
-
-.wrapper {
-  text-align: center;
-}
-
-.booking, .login, .sign-up {
-  background-color: var(--orange);
+nav button {
   border: none;
-  border-radius: 5%;
+  padding: 2%;
+  background-color: white;
+}
+
+nav :hover {
+  background-color: #ececec;
   cursor: pointer;
 }
 
-.booking:hover, .login:hover, .sign-up:hover {
-  text-decoration: underline;
+section {
+  padding: 3%;
 }
 
-form button {
-  font-size: 16px;
+.rooms {
+  background-color: #ffd4ad;
+  padding: 5%;
 }
 
-.submit-booking {
+.overview {
+  padding: 5%;
+  margin-left: 0%;
+  background-color: #fdc07a;
+}
+
+.sectionLayout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.sectionLayout p {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 0%;
+}
+
+.sectionLayout img {
+  max-height: 190px;
+  margin-bottom: 3%;
+  border-radius: 10%;
+}
+
+footer {
   text-align: center;
-  box-sizing: border-box;
-  /* border: 1px solid black; */
-  padding: 10px 10px;
-  width: 100%;
-}
-.submit-booking input {
-  width: 20%;
+  padding-top: 2%;
 }
 
-.submit-booking label {
-  display: inline-block;
-  width: 15%;
+footer .footerLayout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.form-book {
-  display: inline-flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 10px 10px;
+footer .footerLayout .fContentLayout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 10%;
+  max-width: 200px;
 }
-
-@media screen and (min-width: 600px) and (max-width:1000px) {
-  body, button {
-    font-size: 18px;
-  }
-
-  #logo {
-    width: 80%;
-  }
-
-  header {
-    background-color: white;
-  }
-  
-}
-
-@media screen and (min-width: 1001px) {
-  body{
-    font-size: 18px;
-  }
-  #logo {
-    width: 10%;
-  }
-  header {
-    background-color: white;
-  }
-}
+/*# sourceMappingURL=app.css.map */
