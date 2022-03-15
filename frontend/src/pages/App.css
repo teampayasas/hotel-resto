@@ -1,6 +1,5 @@
 body {
   text-align: justify;
-  font-family: monospace;
   margin-left: 0%;
   margin-right: 0%;
 }
@@ -115,4 +114,8 @@ footer .footerLayout .fContentLayout {
   margin-left: 10%;
   max-width: 200px;
 }
-/*# sourceMappingURL=app.css.map */
+
+.Cal {
+  max-width: 500px;
+}
+/*# sourceMappingURL=App.css.map */

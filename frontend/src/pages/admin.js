@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css'
-import Cal from './components/calendar';
-import useAlan from './components/alan/useAlan';
+import Cal from '../components/cal/calendar';
+import useAlan from '../components/alan/useAlan';
 
 function Admin() {
   useAlan()
