@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import './App.css'
 //Front-end user components
-import Header from './components/Header';
-import Menu from './components/Navmen';
-import Gallery from './components/slider/ImageSlider';
-import { SliderData } from './components/slider/SliderData';
-import Content from './components/Main';
-import Footer from './components/Footer';
+import Header from '../components/Header';
+import Menu from '../components/forms/Navmen';
+import Gallery from '../components/slider/ImageSlider';
+import { SliderData } from '../components/slider/SliderData';
+import Content from '../components/Main';
+import Footer from '../components/Footer';
 //Forms
-import SignUp from './components/SignUpForm';
-import Login from './components/LoginForm';
-import Booking from './components/BookForm';
-import BookingF from './components/Booking';
+import SignUp from '../components/forms/SignUpForm';
+import Login from '../components/forms/LoginForm';
+import Booking from '../components/forms/BookForm';
+import BookingF from '../components/forms/Booking';
 
 
 

@@ -6,7 +6,8 @@
 
 
 import React, { useState } from 'react';
-import AdminPage from '../admin'
+import Admin from '../../pages/admin.js';
+
 
 export default function Login() {
 
@@ -31,7 +32,7 @@ export default function Login() {
                 console.log(result)
                 if (result.userRole === "admin") {
                     console.log('Welcome admin');
-                    console.log(<AdminPage/>)
+                    console.log(<Admin/>)
                 } if (result.userRole === "user") {
                     console.log('hola user')
                 }
