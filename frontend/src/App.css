@@ -115,4 +115,17 @@ footer .footerLayout .fContentLayout {
   margin-left: 10%;
   max-width: 200px;
 }
+
+.form {
+  width: 50%;
+}
+
+.form button {
+  width: 98%;
+  padding: 10px 10px;
+  background-color: white;
+  font-size: 18px;
+  border: 1px solid black;
+  margin: 5px 5px;
+}
 /*# sourceMappingURL=app.css.map */
