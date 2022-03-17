@@ -81,8 +81,8 @@ const DataTable = () => {
               plugins={[dayGridPlugin]}
               events={users.map(user => (
                   {title: user.name, 
-                    // date: users.bookingDate, 
-                    date: '2022-03-01', 
+                    date: user.bookingDate, 
+                    // date: '2022-03-01', 
                     id: user._id.$oid}
                 ))}
 
