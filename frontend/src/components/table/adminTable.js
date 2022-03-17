@@ -33,13 +33,13 @@ const DataTable = () => {
                     <th>Date Booked</th>
                     </tr>
                   </thead>
-            {users.map(() => (
-              <tbody key={users.id}>
+            {users.map(user => (
+              <tbody key= {user.id}>
                     <tr>
-                        <td>{users.name}</td>
-                        <td>{users.surname}</td>
-                        {/* <td>{users._id.$oid}</td> */}
-                        <td>{users.bookingDate}</td>
+                        <td>{user.name}</td>
+                        <td>{user.surname}</td>
+                        <td>{user._id.$oid}</td>
+                        {/* <td>{user.bookingDate}</td> */}
                         {/* <td key={users.id}>{users.name} {users.surname}- {users.bookingDate}</td>
                         {console.log(users.id)} */}
                     </tr>
@@ -53,13 +53,13 @@ const DataTable = () => {
             <FullCalendar
               defaultView="dayGridMonth"
               plugins={[dayGridPlugin]}
-              events={[{                
-                title: users.name,start: users.bookingDate,// id:users._id.$oid,
-              }]}
-              // events={[
-              //   { title: 'event 1', date: '2022-03-03' },
-              //   { title: 'event 2', date: '2022-03-02' }
-              // ]}
+              // events={[{                
+              //   title: users.name,start: users.bookingDate,// id:users._id.$oid,
+              // }]}
+              events={[
+                { title: 'event 1', date: '2022-03-03' },
+                { title: 'event 2', date: '2022-03-02' }
+              ]}
                 />
           </div>
         </div>
