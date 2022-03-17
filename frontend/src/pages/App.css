@@ -115,7 +115,23 @@ footer .footerLayout .fContentLayout {
   max-width: 200px;
 }
 
+<<<<<<< HEAD:frontend/src/App.css
+.form {
+  width: 50%;
+}
+
+.form button {
+  width: 98%;
+  padding: 10px 10px;
+  background-color: white;
+  font-size: 18px;
+  border: 1px solid black;
+  margin: 5px 5px;
+}
+/*# sourceMappingURL=app.css.map */
+=======
 .Cal {
   max-width: 500px;
 }
 /*# sourceMappingURL=App.css.map */
+>>>>>>> 159d58a917c61339a080943ab5c760fe0406edda:frontend/src/pages/App.css

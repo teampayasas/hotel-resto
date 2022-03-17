@@ -47,7 +47,7 @@ function Form() {
                 description: "Hotel room",
                 amount: {
                     currency_code: "USD",
-                    value: 20
+                    value: 1
                 },
             }],
 
@@ -82,23 +82,24 @@ function Form() {
         <section className="form">
             <form onSubmit={(e) => { handleSubmit(e) }} action="/booking" method='POST' className="submit-booking">
                 <label for="name"> Name: </label> 
-                <input type="text" value={name} onChange={(e) => setName(e.target.value)}></input> <br/>
+                <input type="text" value={name} required onChange={(e) => setName(e.target.value)}></input> <br/>
                 <label for="surname"> Surname: </label>
-                <input type="text" value={surname} onChange={(e) => setSurname(e.target.value)}></input> <br/>
+                <input type="text" value={surname} required onChange={(e) => setSurname(e.target.value)}></input> <br/>
                 <label for="date"> Date: </label>
-                <input type="date" value={date} onChange={(e) => setDate(e.target.value)}></input> <br/>
+                <input type="date" value={date} required onChange={(e) => setDate(e.target.value)}></input> <br/>
                 <label for="rooms"> Rooms: </label>
-                <input type="number" min="1" step="1" value={rooms} onChange={(e) => setRooms(e.target.value)}></input> <br/>
+                <input type="number" min="1" step="1" value={rooms} required onChange={(e) => setRooms(e.target.value)}></input> <br/>
                 <label for="adults"> Adults: </label>
-                <input type="number" min="1" step="1" value={adults} onChange={(e) => {setAdults(e.target.value)}}></input> <br/>
+                <input type="number" min="1" step="1" value={adults} required onChange={(e) => {setAdults(e.target.value)}}></input> <br/>
                 <label for="kids"> Kids: </label>
-                <input type="number" min="0" step="0" value={kids} onChange={(e) => {setKids(e.target.value)}}></input> <br/>
+                <input type="number" min="0" step="0" value={kids} required onChange={(e) => {setKids(e.target.value)}}></input> <br/>
                 <button type="submit"> Book </button>
                 {/* <button disabled={disable}> Pay </button> */}
                 <PayPalScriptProvider options={{ "client-id": "test" }}>
-                <PayPalButtons disabled={disable} style={{ layout: "horizontal" }} createOrder={createOrder} onApprove={onApprove} />
+                <PayPalButtons disabled={disable} style={{ layout: "horizontal", buttonSize: 'sm', color:"white"}} createOrder={createOrder} onApprove={onApprove} />
                 </PayPalScriptProvider>
             </form>
+            {/*.paypal-button-container */}
             {/* <PayPalScriptProvider options={{ "client-id": "test" }}>
             <PayPalButtons disabled={disable} style={{ layout: "horizontal" }} createOrder={createOrder} onApprove={onApprove} />
             </PayPalScriptProvider> */}
