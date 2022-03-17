@@ -31,9 +31,8 @@ const DataTable = () => {
 
     if (keyword !== '') {
       const results = users.filter((user) => {
-        return user.name.toLowerCase().startsWith(keyword.toLowerCase());
-        // return user._id.$oid.startsWith(keyword) ;
-        // Use the toLowerCase() method to make it case-insensitive
+        // return user.name.toLowerCase().startsWith(keyword.toLowerCase());
+        return user._id.$oid.startsWith(keyword) ;
       });
       setFoundUsers(results);
     } else {
