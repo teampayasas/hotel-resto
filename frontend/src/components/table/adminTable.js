@@ -13,6 +13,8 @@ const DataTable = () => {
         })
         .then(data => {
           setUsers(data)
+          console.log(data)
+          console.log(data[2].bookingDate)        
         })
     }
     // ACCESSING DATA
