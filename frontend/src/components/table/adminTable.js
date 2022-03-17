@@ -21,8 +21,7 @@ const DataTable = () => {
     }, [])
 
 // Coding in Search Filter by ID values
-  // the value of the search field 
-  // const [searchUser, setName] = useState('');
+// Need to figure out how to hide the data until searched
 
   // the search result
   const [foundUsers, setFoundUsers] = useState(users);
@@ -32,7 +31,8 @@ const DataTable = () => {
 
     if (keyword !== '') {
       const results = users.filter((user) => {
-        return user._id.$oid.startsWith(keyword), user.name.toLowerCase().startsWith(keyword.toLowerCase());
+        return user.name.toLowerCase().startsWith(keyword.toLowerCase());
+        // return user._id.$oid.startsWith(keyword) ;
         // Use the toLowerCase() method to make it case-insensitive
       });
       setFoundUsers(results);
@@ -49,22 +49,26 @@ const DataTable = () => {
     return (
       <div>
         {/* SETTING FILTERED SEARCH */}
-        <input type="search" 
-        // value={!''}
-        onChange={filter} className="input" placeholder="Filter"/>
-      <div className="user-list">
-        {foundUsers && foundUsers.length > 0 ? (
-          foundUsers.map((user) => (
-            <ul key={user.id} className="user">
-              <li className="user-name">Name: {user.name} {user.surname}</li>
-              <li>Rooms Booked: {user.rooms}</li>
-              <li>Number of Adults: {user.adults}</li>
-              <li>Number of Kids: {user.kids}</li>
-            </ul>
-          ))
-        ) : (
-          <h4>No results</h4>
-        )}
+        <div className="filterBar">
+          <h2>Filter Clients</h2>
+          <input type="search" 
+          // value={!''}
+          onChange={filter} className="input" placeholder="Insert Name or ID"/>
+        <div className="user-list">
+          {foundUsers && foundUsers.length > 0 ? (
+            foundUsers.map((user) => (
+              <ul key={user.id} className="user">
+                <li className="user-name">Name: {user.name} {user.surname}</li>
+                <li>Rooms Booked: {user.rooms}</li>
+                <li>Number of Adults: {user.adults}</li>
+                <li>Number of Kids: {user.kids}</li>
+                {/* <li>Number of Kids: {user.bookingDate}</li> */}
+              </ul>
+            ))
+          ) : (
+            <h4>No results</h4>
+          )}
+        </div>
       </div>
       <div className="adminLayout">
         <div className="Cal">
