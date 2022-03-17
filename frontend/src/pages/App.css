@@ -115,7 +115,37 @@ footer .footerLayout .fContentLayout {
   max-width: 200px;
 }
 
+<<<<<<< HEAD
 .Cal {
   max-width: 500px;
 }
 /*# sourceMappingURL=App.css.map */
+=======
+.adminLayout {
+  padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.adminLayout .Cal {
+  width: 500px;
+}
+
+.adminLayout .tableLayout {
+  margin: 1%;
+}
+
+.adminLayout .tableLayout thead {
+  border: 1px solid black;
+}
+
+.adminLayout .tableLayout thead tr th {
+  margin-right: 2%;
+}
+/*# sourceMappingURL=App.css.map */
+>>>>>>> bd59e93933e8e9bc09f587e51c2a008ece62f148
