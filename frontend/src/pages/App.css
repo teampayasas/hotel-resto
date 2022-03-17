@@ -115,20 +115,30 @@ footer .footerLayout .fContentLayout {
   max-width: 200px;
 }
 
-.form {
-  width: 50%;
+.adminLayout {
+  padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.form button {
-  width: 98%;
-  padding: 10px 10px;
-  background-color: white;
-  font-size: 18px;
-  border: 1px solid black;
-  margin: 5px 5px;
+.adminLayout .Cal {
+  width: 500px;
 }
-/*# sourceMappingURL=app.css.map */
-.Cal {
-  max-width: 500px;
+
+.adminLayout .tableLayout {
+  margin: 1%;
+}
+
+.adminLayout .tableLayout thead {
+  border: 1px solid black;
+}
+
+.adminLayout .tableLayout thead tr th {
+  margin-right: 2%;
 }
 /*# sourceMappingURL=App.css.map */
