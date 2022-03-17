@@ -1,8 +1,6 @@
 import React,{ useState, useEffect } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-// import {useTable} from 'react-table';
-// import Realm from "realm"
 
 const DataTable = () => {
     const [users, setUsers] = useState([])
@@ -19,11 +17,7 @@ const DataTable = () => {
     useEffect(() => {
       fetchData()
     }, [])
-    // const [events, setEvents] = useState([]);
-    // console.log(users)
-  // const onEventAdded = (event) => {
-  //   setEvents([...events, event]);
-  // };
+
     return (
       <div>
       {users.length > 0 && (
@@ -49,7 +43,6 @@ const DataTable = () => {
           ))}
           </table>
           )}
-      {/* {users.length > 0 && ( */}
         <div className="Cal">
         <div className="calendarLayout">
         {/* 
@@ -67,22 +60,8 @@ const DataTable = () => {
               />
         </div>
       </div>
-        {/* )} */}
     </div>
       
     )
   }
     export default DataTable
-    
-// events={[users = {
-//   title: users.name,
-//   date: '2022-03-03'
-// }]}
-// events={[{                
-//   title: users.name,start: users.bookingDate,// id:users._id.$oid,
-// }]}
-// events={[
-//   { title: 'jessie', date: '2022-03-03' }
-// ]}
-{/* <td>{user.bookingDate}</td> */}
-{/* {/* <td key={users.id}>{users.name} {users.surname}- {users.bookingDate}</td> */}
