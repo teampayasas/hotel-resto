@@ -25,40 +25,42 @@ const DataTable = () => {
 
         {users.length > 0 && (
                 <table>
+                  <thead>
                     <tr>
                     <th>Name</th>
                     <th>Surname</th>
                     <th>Unique ID</th>
                     <th>Date Booked</th>
                     </tr>
-            {users.map(user => (
+                  </thead>
+            {users.map(() => (
+              <tbody key={users.id}>
                     <tr>
-                        <td key={user.id}>{user.name}</td>
-                        <td>{user.surname}</td>
-                        <td>{user._id.$oid}</td>
-                        <td>{user.bookingDate}</td>
-                        {/* <td key={user.id}>{user.name} {user.surname} - {user._id.$oid} - {user.bookingDate}</td> */}
+                        <td>{users.name}</td>
+                        <td>{users.surname}</td>
+                        {/* <td>{users._id.$oid}</td> */}
+                        <td>{users.bookingDate}</td>
+                        {/* <td key={users.id}>{users.name} {users.surname}- {users.bookingDate}</td>
+                        {console.log(users.id)} */}
                     </tr>
+                    </tbody>
             ))}
             </table>
-        )}
+            )}
         {users.length > 0 && (
         <div className="Cal">
           <div className="calendarLayout">
             <FullCalendar
               defaultView="dayGridMonth"
               plugins={[dayGridPlugin]}
-              events={[{
-                title: users.name,
-                start: users.bookingDate,
-                id:users._id.$oid,
+              events={[{                
+                title: users.name,start: users.bookingDate,// id:users._id.$oid,
               }]}
               // events={[
               //   { title: 'event 1', date: '2022-03-03' },
               //   { title: 'event 2', date: '2022-03-02' }
               // ]}
                 />
-                {console.log(users)}
           </div>
         </div>
           )}
