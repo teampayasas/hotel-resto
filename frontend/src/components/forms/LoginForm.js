@@ -35,6 +35,7 @@ export default function Login() {
                     console.log(<Admin/>)
                 } if (result.userRole === "user") {
                     console.log('hola user')
+                    console.log(`Hola ${result.name}, this is your id ${result._id.$oid}`)
                 }
             } else {
                 console.log('Error logging in :(')
