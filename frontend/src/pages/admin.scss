@@ -1,0 +1,23 @@
+// body{}
+.adminLayout{
+    padding: 2%;
+    display:flex;
+    flex-direction: row;
+    .Cal{
+        width: 500px;
+    }
+    .tableLayout{
+        margin: 1%;
+            thead{
+                border: 1px solid black;
+                tr{
+                    th{
+                        margin-right: 2%;
+                    }
+                }
+            }
+    }
+}
+// .filterBar{
+//     background-color: black;
+// }

@@ -12,9 +12,7 @@ const DataTable = () => {
           return response.json()
         })
         .then(data => {
-          setUsers(data)
-          console.log(data)
-          console.log(data[2].bookingDate)        
+          setUsers(data)      
         })
     }
     // ACCESSING DATA
@@ -74,18 +72,14 @@ const DataTable = () => {
       <div className="adminLayout">
         <div className="Cal">
           <div className="calendarLayout">
-          {/* 
-              {/* {console.log(users)} */}
             <FullCalendar
               defaultView="dayGridMonth"
               plugins={[dayGridPlugin]}
               events={users.map(user => (
                   {title: user.name, 
                     date: user.bookingDate, 
-                    // date: '2022-03-01', 
                     id: user._id.$oid}
                 ))}
-
                 />
           </div>
         </div>
