@@ -63,7 +63,7 @@ const DataTable = () => {
                 <li>Rooms Booked: {user.rooms}</li>
                 <li>Number of Adults: {user.adults}</li>
                 <li>Number of Kids: {user.kids}</li>
-                {/* <li>Number of Kids: {user.bookingDate}</li> */}
+                <li>Date booked: {user.bookingDate}</li>
               </ul>
             ))
           ) : (
@@ -82,7 +82,6 @@ const DataTable = () => {
               events={users.map(user => (
                   {title: user.name, 
                     date: user.bookingDate, 
-                    // date: '2022-03-01', 
                     id: user._id.$oid}
                 ))}
 
@@ -105,8 +104,6 @@ const DataTable = () => {
                         <td>{user.name}</td>
                         <td>{user.surname}</td>
                         <td>{user._id.$oid}</td>
-                        {/* <td>{user.bookingDate}</td> */}
-                        {/* {console.log(users)} */}
                     </tr>
                     </tbody>
             ))}
