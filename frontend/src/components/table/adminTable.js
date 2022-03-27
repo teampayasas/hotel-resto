@@ -12,6 +12,7 @@ const DataTable = () => {
           return response.json()
         })
         .then(data => {
+          console.log(data)
           setUsers(data)      
         })
     }
@@ -61,7 +62,8 @@ const DataTable = () => {
                 <li>Rooms Booked: {user.rooms}</li>
                 <li>Number of Adults: {user.adults}</li>
                 <li>Number of Kids: {user.kids}</li>
-                <li>Date booked: {user.bookingDate}</li>
+                <li>Check In Date: {user.checkIn}</li>
+                <li>Check Out Date: {user.checkOut}</li>
               </ul>
             ))
           ) : (
@@ -77,7 +79,8 @@ const DataTable = () => {
               plugins={[dayGridPlugin]}
               events={users.map(user => (
                   {title: user.name, 
-                    date: user.bookingDate, 
+                    start: user.checkIn, 
+                    end: user.checkOut,
                     id: user._id.$oid}
                 ))}
                 />
