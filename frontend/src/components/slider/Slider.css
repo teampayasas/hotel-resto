@@ -1,10 +1,19 @@
+.bedrooms {
+    height: 200px;
+}
+
+.holder {
+    background-color: rgb(245, 239, 239);
+    height: 75vh;
+}
+
 .slider {
+    width: 50%;
     position: relative;
     height: 30vh;
     display: flex;
-    justify-content: center;
-    align-content: center;
-    background-color: rgb(245, 239, 239);
+    /* justify-content: center;
+    align-content: center; */
 }
 
 .image {
@@ -16,7 +25,7 @@
 .right-arrow {
     position: absolute;
     top: 45%;
-    right: 5px;
+    right: 80px;
     font-size: 3rem;
     color: rgb(202, 202, 202);
     z-index: 10;
@@ -45,6 +54,28 @@
     transition-duration: 15s;
     transform: scale(1.08);
 }
+
+.BookingForm {
+    box-sizing: border-box;
+    width: 50%;
+    position: relative;
+    margin-left: 100%;
+}
+
+input {
+    margin:5px 0;
+    width: 180px;
+}
+
+button[type=submit] {
+    width: 150px;
+    background-color: white;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid black;
+    margin: 5px 0;
+}
+  
 
 @media screen and (min-width: 600px) {
     
