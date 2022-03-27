@@ -7,8 +7,8 @@ import Admin from './pages/admin';
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-    // <App />,
-    <Admin />,
+    <App />,
+    // <Admin />,
 
   document.getElementById('root')
 );

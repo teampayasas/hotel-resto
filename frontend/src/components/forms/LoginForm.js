@@ -6,8 +6,8 @@
 
 
 import React, { useState } from 'react';
+// import { Redirect, Route } from 'react-router';
 import Admin from '../../pages/admin.js';
-
 
 export default function Login() {
 
@@ -32,7 +32,7 @@ export default function Login() {
                 console.log(result)
                 if (result.userRole === "admin") {
                     console.log('Welcome admin');
-                    console.log(<Admin/>)
+                    // window.location.replace(<Admin />)
                 } if (result.userRole === "user") {
                     console.log('hola user')
                     console.log(`Hola ${result.name}, this is your id ${result._id.$oid}`)

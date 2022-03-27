@@ -28,16 +28,23 @@ function Main() {
         <p> <i> Deluxe Room </i> <br />
         Independent, spacious, luxuriously appointed 
         cottages of 600 soft with a private sit out 
-        overlooking the river. 
+        overlooking the river. <br />
+        <img src="https://cdn.pixabay.com/photo/2016/09/18/03/28/travel-1677347_1280.jpg" alt="room" className="bedrooms" />
+        <br/>
+        Price: £100 per night
         {/* <img src="https://cdn.pixabay.com/photo/2016/07/08/23/33/hotel-room-1505455_1280.jpg" alt="room" /> */}
         
-        <br />
+        <br/>
+        <br/>
         
         <i> Deluxe Villa </i> <br />
         The room is equipped with a fireplace, a king size 
         bed, a telephone and an attached bathroom. 
-        The room overlooks the lake. 
+        The room overlooks the lake. <br />
+        <img src="https://cdn.pixabay.com/photo/2016/10/01/01/53/room-1706801_1280.jpg" alt="room" className="bedrooms" />
         {/* <img src="https://cdn.pixabay.com/photo/2021/10/06/15/05/bedroom-6686061_1280.jpg" alt="room" /> */}
+        <br/>
+        Price: £200 per night
         </p>
         </section>
         </main>

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { SliderData } from './SliderData'
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 import './Slider.css'
+import BookingForm from '../forms/BookForm';
 
 const ImageSlider = ( {slides} ) => {
     const [current, setCurrent] = useState(0);
@@ -22,6 +23,7 @@ const ImageSlider = ( {slides} ) => {
     }
 
   return (
+      <section className='holder'>
       <section className="slider">
           <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide}/>
           <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide}/>
@@ -35,8 +37,12 @@ const ImageSlider = ( {slides} ) => {
             </div>
         )
         })}
+        <section className='holder-form'> 
+            <BookingForm />
+        </section>
       </section>
-  )
+      </section>
+    )
 }
 
 export default ImageSlider

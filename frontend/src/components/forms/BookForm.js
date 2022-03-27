@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import { useEffect } from "react";
 // import { application } from "express";
 
 function Form() {
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
-    const [date, setDate] = useState('');
+    const [checkIn, setCheckIn] = useState('');
+    const [checkOut, setCheckOut] = useState('');
     const [rooms, setRooms] = useState('');
     const [adults, setAdults] = useState('');
     const [kids, setKids] = useState('');
@@ -28,12 +30,13 @@ function Form() {
                 'Content-Type': 'application/json'
             },
             method: 'POST',
-            body: JSON.stringify({name:name, surname:surname, date:date, rooms:rooms, adults:adults, kids:kids})
+            body: JSON.stringify({name:name, surname:surname, checkIn:checkIn, checkOut:checkOut, rooms:rooms, adults:adults, kids:kids})
         })
         setDisable(false)
         setName("")
         setSurname("")
-        setDate("")
+        setCheckIn("")
+        setCheckOut("")
         setRooms("") 
         setAdults("")
         setKids("")
@@ -72,27 +75,29 @@ function Form() {
         setErrorMessage("An error occured with your payment");
     };
 
-    // useEffect(() => {
-    //     if(success) {
-    //         alert('Payment successful :)')
-    //     }
-    // })
+    useEffect(() => {
+        if(success) {
+            alert('Payment successful :)')
+        }
+    })
 
     return (
-        <section className="form">
+        <section className="BookingForm">
             <form onSubmit={(e) => { handleSubmit(e) }} action="/booking" method='POST' className="submit-booking">
                 <label for="name"> Name: </label> 
-                <input type="text" value={name} required onChange={(e) => setName(e.target.value)}></input> <br/>
+                <input type="text" value={name} required onChange={(e) => setName(e.target.value)}></input>
                 <label for="surname"> Surname: </label>
-                <input type="text" value={surname} required onChange={(e) => setSurname(e.target.value)}></input> <br/>
-                <label for="date"> Date: </label>
-                <input type="date" value={date} required onChange={(e) => setDate(e.target.value)}></input> <br/>
+                <input type="text" value={surname} required onChange={(e) => setSurname(e.target.value)}></input>
+                <label for="date"> Check In: </label>
+                <input type="date" value={checkIn} required onChange={(e) => setCheckIn(e.target.value)}></input>
+                <label for="date"> Check Out: </label>
+                <input type="date" value={checkOut} required onChange={(e) => setCheckOut(e.target.value)}></input>
                 <label for="rooms"> Rooms: </label>
-                <input type="number" min="1" step="1" value={rooms} required onChange={(e) => setRooms(e.target.value)}></input> <br/>
+                <input type="number" min="1" step="1" value={rooms} required onChange={(e) => setRooms(e.target.value)}></input>
                 <label for="adults"> Adults: </label>
-                <input type="number" min="1" step="1" value={adults} required onChange={(e) => {setAdults(e.target.value)}}></input> <br/>
+                <input type="number" min="1" step="1" value={adults} required onChange={(e) => {setAdults(e.target.value)}}></input>
                 <label for="kids"> Kids: </label>
-                <input type="number" min="0" step="0" value={kids} required onChange={(e) => {setKids(e.target.value)}}></input> <br/>
+                <input type="number" min="0" step="0" value={kids} required onChange={(e) => {setKids(e.target.value)}}></input>
                 <button type="submit"> Book </button>
                 {/* <button disabled={disable}> Pay </button> */}
                 <PayPalScriptProvider options={{ "client-id": "test" }}>

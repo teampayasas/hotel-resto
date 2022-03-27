@@ -11,19 +11,19 @@ import Footer from '../components/Footer';
 import SignUp from '../components/forms/SignUpForm';
 import Login from '../components/forms/LoginForm';
 import Booking from '../components/forms/BookForm';
-import BookingF from '../components/forms/Booking';
+import Nav from '../components/Navbar'
 
 
 
 function App() {
   // useAlan()
-  const [BookOpen, setBookOpen] = useState(null)
+  // const [BookOpen, setBookOpen] = useState(null)
   const [SignUpOpen, setSignUpOpen] = useState(null)
   const [LoginOpen, setLoginOpen] = useState(null)
   return (
     <div className="wrapper">
       <Header />
-      <nav>
+      {/* <nav>
         <button className='booking' onClick={() => { if (BookOpen === null) {setBookOpen(<Booking />)}
         else {
           setBookOpen(null)
@@ -39,7 +39,8 @@ function App() {
     </nav>
     {BookOpen}
     {SignUpOpen}
-    {LoginOpen}
+    {LoginOpen} */}
+        <Nav />
       <Gallery slides={SliderData} />
       {/* <BookingF/> */}
       <Content />
