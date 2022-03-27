@@ -114,6 +114,7 @@ footer .footerLayout .fContentLayout {
   margin-left: 10%;
   max-width: 200px;
 }
+<<<<<<< HEAD
 
 .adminLayout {
   padding: 2%;
@@ -141,4 +142,6 @@ footer .footerLayout .fContentLayout {
 .adminLayout .tableLayout thead tr th {
   margin-right: 2%;
 }
+=======
+>>>>>>> 7ae95c7f7066057fc375c9006a290be2895e888a
 /*# sourceMappingURL=App.css.map */

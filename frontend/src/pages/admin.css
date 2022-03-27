@@ -1,0 +1,27 @@
+.adminLayout {
+  padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.adminLayout .Cal {
+  width: 500px;
+}
+
+.adminLayout .tableLayout {
+  margin: 1%;
+}
+
+.adminLayout .tableLayout thead {
+  border: 1px solid black;
+}
+
+.adminLayout .tableLayout thead tr th {
+  margin-right: 2%;
+}
+/*# sourceMappingURL=admin.css.map */
