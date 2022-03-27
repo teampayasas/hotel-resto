@@ -12,7 +12,7 @@ const DataTable = () => {
           return response.json()
         })
         .then(data => {
-          console.log(data)
+          // console.log(data)
           setUsers(data)      
         })
     }

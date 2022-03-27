@@ -34,8 +34,9 @@ export default function useAlan() {
       onCommand: ({command}) => {
         if(command === 'testCommand'){
           // console.log(data)
-          // alert('this is different :)')
-          createBooking()
+          alert('this is different :)')
+          // createBooking()
+          // console.log()
             }
             // C/RUD
         // if(command === 'alertCommand'){
