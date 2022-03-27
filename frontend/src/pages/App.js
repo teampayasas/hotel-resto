@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 import SignUp from '../components/forms/SignUpForm';
 import Login from '../components/forms/LoginForm';
 import Booking from '../components/forms/BookForm';
-import BookingF from '../components/forms/Booking';
+import Nav from '../components/Navbar'
 
 
 
@@ -23,11 +23,11 @@ function App() {
   return (
     <div className="wrapper">
       <Header />
-      <nav>
-        {/* <button className='booking' onClick={() => { if (BookOpen === null) {setBookOpen(<Booking />)}
+      {/* <nav>
+        <button className='booking' onClick={() => { if (BookOpen === null) {setBookOpen(<Booking />)}
         else {
           setBookOpen(null)
-        }}}>BOOK NOW</button> */}
+        }}}>BOOK NOW</button>
         <button className='login' onClick={() => { if (LoginOpen === null) { setLoginOpen(<Login />)} 
         else {
             setLoginOpen(null)
@@ -37,9 +37,10 @@ function App() {
           setSignUpOpen(null)
         }}}>SIGN-UP</button>
     </nav>
-    {/* {BookOpen} */}
+    {BookOpen}
     {SignUpOpen}
-    {LoginOpen}
+    {LoginOpen} */}
+        <Nav />
       <Gallery slides={SliderData} />
       {/* <BookingF/> */}
       <Content />
