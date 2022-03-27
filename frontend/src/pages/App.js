@@ -17,17 +17,17 @@ import BookingF from '../components/forms/Booking';
 
 function App() {
   // useAlan()
-  const [BookOpen, setBookOpen] = useState(null)
+  // const [BookOpen, setBookOpen] = useState(null)
   const [SignUpOpen, setSignUpOpen] = useState(null)
   const [LoginOpen, setLoginOpen] = useState(null)
   return (
     <div className="wrapper">
       <Header />
       <nav>
-        <button className='booking' onClick={() => { if (BookOpen === null) {setBookOpen(<Booking />)}
+        {/* <button className='booking' onClick={() => { if (BookOpen === null) {setBookOpen(<Booking />)}
         else {
           setBookOpen(null)
-        }}}>BOOK NOW</button>
+        }}}>BOOK NOW</button> */}
         <button className='login' onClick={() => { if (LoginOpen === null) { setLoginOpen(<Login />)} 
         else {
             setLoginOpen(null)
@@ -37,7 +37,7 @@ function App() {
           setSignUpOpen(null)
         }}}>SIGN-UP</button>
     </nav>
-    {BookOpen}
+    {/* {BookOpen} */}
     {SignUpOpen}
     {LoginOpen}
       <Gallery slides={SliderData} />
