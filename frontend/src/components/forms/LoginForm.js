@@ -3,9 +3,8 @@
 //indexof('@')
 // Regular expression
 //Patter between /`{}$/
-
-
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 // import { Redirect, Route } from 'react-router';
 import Admin from '../../pages/admin.js';
 
@@ -13,6 +12,9 @@ export default function Login() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const navigate = useNavigate();
+    function RedirectUser () {navigate("/admin")}
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -32,6 +34,7 @@ export default function Login() {
                 console.log(result)
                 if (result.userRole === "admin") {
                     console.log('Welcome admin');
+                    RedirectUser()
                     // window.location.replace(<Admin />)
                 } if (result.userRole === "user") {
                     console.log('hola user')

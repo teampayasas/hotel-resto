@@ -4,11 +4,15 @@ import ReactDOM from 'react-dom';
 import './pages/App.css';
 import App from './pages/App';
 import Admin from './pages/admin';
+import { BrowserRouter } from 'react-router-dom'
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-    // <App />,
-    <Admin />,
-
+  <React.StrictMode>
+    <BrowserRouter>
+    <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+  // <Admin />
   document.getElementById('root')
 );
