@@ -8,7 +8,6 @@ function CalData() {
         let mongoDB = data[i];
         // this.setState({UserData: mongoDB});
         dataset.push(mongoDB);
-        console.log(mongoDB)
     }
 }
 export default CalData;
