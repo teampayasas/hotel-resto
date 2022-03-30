@@ -1,6 +1,7 @@
 // import {useEffect} from 'react'
 import React, { useEffect } from 'react';
 import alanBtn from '@alan-ai/alan-sdk-web';
+import ModalData from './dataModel'
 
 
 export default function useAlan() {
@@ -30,19 +31,8 @@ export default function useAlan() {
     }
     alanBtn({
       key:  
-      'e98b154fd089d01807425dd7b3d167e72e956eca572e1d8b807a3e2338fdd0dc/stage',
-      onCommand: ({command}) => {
-        if(command === 'testCommand'){
-          // console.log(data)
-          alert('this is different :)')
-          // createBooking()
-          // console.log()
-            }
-            // C/RUD
-        // if(command === 'alertCommand'){
-        //   alert('you opened the alert!')
-        //     }
-          }
+      'e98b154fd089d01807425dd7b3d167e72e956eca572e1d8b807a3e2338fdd0dc/stage'
+      
       });
     }, []);
     return null

@@ -6,7 +6,7 @@ import useAlan from '../components/alan/useAlan';
 import DataTable from '../components/table/adminTable';
 
 function Admin() {
-  useAlan()
+  // useAlan()
   return (
     <div className="wrapper">
       <h1>Welcome Back</h1>

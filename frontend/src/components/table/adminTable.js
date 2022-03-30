@@ -1,7 +1,9 @@
 import React,{ useState, useEffect } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-
+import ModalData from '../alan/dataModel'
+import useAlan from "../alan/useAlan";
+// import "../alan/modal.css";
 const DataTable = () => {
 // DECLARING DATA
     const [users, setUsers, setName] = useState([])
@@ -12,65 +14,38 @@ const DataTable = () => {
           return response.json()
         })
         .then(data => {
-          // console.log(data)
           setUsers(data)      
+          // console.log(data)
         })
     }
     // ACCESSING DATA
     useEffect(() => {
       fetchData()
     }, [])
+    
+    // DISPLAYING DATABASE
+    useAlan({
+      onCommand: ({command}) => {
+        if(command === 'openModal'){
+          alert("Modal is popping up?")
+          // ModalData()
+            // activate modal
 
-// Coding in Search Filter by ID values
-// Need to figure out how to hide the data until searched
-
-  // the search result
-  const [foundUsers, setFoundUsers] = useState(users);
-
-  const filter = (e) => {
-    const keyword = e.target.value;
-
-    if (keyword !== '') {
-      const results = users.filter((user) => {
-        // return user.name.toLowerCase().startsWith(keyword.toLowerCase());
-        return user._id.$oid.startsWith(keyword) ;
-      });
-      setFoundUsers(results);
-    } else {
-      setFoundUsers(users);
-      // If the text field is empty, show all users
+            }
+            // C/RUD
+        // if(command === 'alertCommand'){
+        //   alert('you opened the alert!')
+            //
     }
+  })
+  function EditData(e){
+    console.log(e.target.id)
+    console.log(users)
 
-    setName(keyword);
-  };
-
-
+  }
 // USING DATA CALLED TO POPULATE CALENDAR AND TABLE
     return (
       <div>
-        {/* SETTING FILTERED SEARCH */}
-        <div className="filterBar">
-          <h2>Filter Clients</h2>
-          <input type="search" 
-          // value={!''}
-          onChange={filter} className="input" placeholder="Insert Name or ID"/>
-        <div className="user-list">
-          {foundUsers && foundUsers.length > 0 ? (
-            foundUsers.map((user) => (
-              <ul key={user.id} className="user">
-                <li className="user-name">Name: {user.name} {user.surname}</li>
-                <li>Rooms Booked: {user.rooms}</li>
-                <li>Number of Adults: {user.adults}</li>
-                <li>Number of Kids: {user.kids}</li>
-                <li>Check In Date: {user.checkIn}</li>
-                <li>Check Out Date: {user.checkOut}</li>
-              </ul>
-            ))
-          ) : (
-            <h4>No results</h4>
-          )}
-        </div>
-      </div>
       <div className="adminLayout">
         <div className="Cal">
           <div className="calendarLayout">
@@ -98,16 +73,18 @@ const DataTable = () => {
                   </thead>
             {users.map(user => (
               <tbody key= {user.id}>
-                    <tr>
-                        <td>{user.name}</td>
-                        <td>{user.surname}</td>
-                        <td>{user._id.$oid}</td>
-                    </tr>
-                    </tbody>
+                  <tr>
+                      <td>{user.name}</td>
+                      <td>{user.surname}</td>
+                      <td>{user._id.$oid}</td>
+                      <button className="openModalBtn" id={user._id.$oid} onClick={(e) => {EditData(e)}}>Edit</button>
+                  </tr>
+              </tbody>
             ))}
             </table>
             )}
           </div>
+          <div className="EditModal"></div>
         </div>
     </div>
       
