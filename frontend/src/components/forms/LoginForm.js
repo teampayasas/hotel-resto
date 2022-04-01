@@ -44,10 +44,6 @@ export default function Login() {
                 console.log('Error logging in :(')
             }
         })
-
-
-        // setEmail("")
-        // setPassword("")
     }
 
     return (

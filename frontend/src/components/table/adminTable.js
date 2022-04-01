@@ -1,12 +1,13 @@
 import React,{ useState, useEffect } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-import ModalData from '../alan/dataModel'
+// import alanBtn from '@alan-ai/alan-sdk-web';
 import useAlan from "../alan/useAlan";
-// import "../alan/modal.css";
+// import useAlan from "../alan/useAlan";
+// .// import "../alan/modal.css";
 const DataTable = () => {
 // DECLARING DATA
-    const [users, setUsers, setName] = useState([])
+    const [users, setUsers] = useState([])
 // FETCHING DATA FROM DATABASE
     const fetchData = () => {
       fetch("https://eu-west-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-yjsic/service/bookings/incoming_webhook/bookingData")
@@ -23,24 +24,25 @@ const DataTable = () => {
       fetchData()
     }, [])
     
-    // DISPLAYING DATABASE
+    
     useAlan({
-      onCommand: ({command}) => {
-        if(command === 'openModal'){
-          alert("Modal is popping up?")
-          // ModalData()
-            // activate modal
-
-            }
-            // C/RUD
-        // if(command === 'alertCommand'){
-        //   alert('you opened the alert!')
-            //
-    }
-  })
-  function EditData(e){
-    console.log(e.target.id)
-    console.log(users)
+      onCommand: function (commandData) {
+        if (commandData.command === "go:back") {
+          // Call client code that will react to the received command
+        }
+      }
+      
+    })
+    // alanBtn({
+    //   key:"e98b154fd089d01807425dd7b3d167e72e956eca572e1d8b807a3e2338fdd0dc/stage",
+    //  }
+    // })
+    // let stringID = ""
+    // console.log(stringID)
+    function EditData(e){
+      let selectedID = e.target.id
+      //  stringID.push(selectedID)
+      useAlan.setVisualState({"data": JSON.stringify(selectedID)})
 
   }
 // USING DATA CALLED TO POPULATE CALENDAR AND TABLE
@@ -68,6 +70,11 @@ const DataTable = () => {
                     <tr>
                     <th>Name</th>
                     <th>Surname</th>
+                    <th>Num of Rooms</th>
+                    <th>Adults</th>
+                    <th>Kids</th>
+                    <th>Check In</th>
+                    <th>Check Out</th>
                     <th>Unique ID</th>
                     </tr>
                   </thead>
@@ -76,6 +83,11 @@ const DataTable = () => {
                   <tr>
                       <td>{user.name}</td>
                       <td>{user.surname}</td>
+                      <td>{user.rooms}</td>
+                      <td>{user.adults}</td>
+                      <td>{user.kids}</td>
+                      <td>{user.checkIn}</td>
+                      <td>{user.checkOut}</td>
                       <td>{user._id.$oid}</td>
                       <button className="openModalBtn" id={user._id.$oid} onClick={(e) => {EditData(e)}}>Edit</button>
                   </tr>
@@ -84,7 +96,7 @@ const DataTable = () => {
             </table>
             )}
           </div>
-          <div className="EditModal"></div>
+          <Store items={storeItems} />
         </div>
     </div>
       
