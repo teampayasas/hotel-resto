@@ -1,6 +1,8 @@
 import React,{ useState, useEffect } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
+import Store from "../alan/Store"
+// import StoreItems from ""
 // import alanBtn from '@alan-ai/alan-sdk-web';
 import useAlan from "../alan/useAlan";
 // import useAlan from "../alan/useAlan";
@@ -63,7 +65,7 @@ const DataTable = () => {
                 />
           </div>
         </div>
-        <div className="tableLayout">
+        {/* <div className="tableLayout">
         {users.length > 0 && (
           <table>
                   <thead>
@@ -95,8 +97,8 @@ const DataTable = () => {
             ))}
             </table>
             )}
-          </div>
-          <Store items={storeItems} />
+          </div> */}
+          <Store  />
         </div>
     </div>
       
