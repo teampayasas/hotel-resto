@@ -1,6 +1,6 @@
 .modalBackground {
-    width: 100%;
-    background-color: rgba(200,200,200);
+    width: 95%;
+    background-color: rgb(255, 229, 180);
     position: sticky;
     display: flex;
     justify-content: center;
@@ -16,14 +16,14 @@
     box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
-    padding: 25px;
+    padding: 5px 5px;
 }
 
-.modalContainer .title {
+/* .modalContainer .title {
     display: inline-block;
     text-align: center;
-    margin-top: 10px;
-}
+    margin-top: 10px; 
+} */
 
 .titleCloseButton {
     display: flex;
@@ -41,8 +41,16 @@
     text-align: center;
 }
 
-.modalContainer .footer {
+input[type=submit] {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 5%;
+}
+
+/* .modalContainer .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
