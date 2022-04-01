@@ -23,6 +23,7 @@ function Form() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("This form has been submitted");
+        alert(`Proceed with payment please`)
 
         fetch('https://eu-west-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-yjsic/service/bookings/incoming_webhook/PostBooking', {
             headers: {
