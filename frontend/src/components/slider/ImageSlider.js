@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { SliderData } from './SliderData'
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
-import './Slider.css'
+import '../slider/Slider.css'
 import BookingForm from '../forms/BookForm';
 
 const ImageSlider = ( {slides} ) => {
