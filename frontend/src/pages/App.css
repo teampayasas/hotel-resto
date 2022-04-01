@@ -131,6 +131,12 @@ footer .footerLayout {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer .footerLayout .fContentLayout {
@@ -141,7 +147,52 @@ footer .footerLayout .fContentLayout {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 10%;
+  padding: 3%;
   max-width: 200px;
+}
+
+@media screen and (max-width: 400px) {
+  header img {
+    max-height: 200px;
+  }
+  .sectionLayout p {
+    padding-top: 60%;
+    padding-left: 0%;
+    padding-right: 0%;
+    margin-left: -270px;
+  }
+  .bedrooms {
+    width: 100px;
+  }
+  figure {
+    width: 120px;
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 5px #4d4d4e;
+            box-shadow: 5px 5px 5px #4d4d4e;
+    margin-top: 25%;
+  }
+  #deluxe {
+    margin-left: -40%;
+  }
+  footer {
+    text-align: center;
+    padding-top: 2%;
+  }
+  footer .footerLayout {
+    width: 250px;
+  }
+  footer .footerLayout .fContentLayout {
+    width: 150px;
+    padding: 5px;
+    margin-left: 0%;
+  }
+  footer .footerLayout .fContentLayout h2 {
+    font-size: 12px;
+  }
+  footer .footerLayout .fContentLayout p {
+    width: 130px;
+    height: auto;
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=App.css.map */

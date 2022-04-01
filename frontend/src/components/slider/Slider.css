@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 .holder {
     /* background-color: rgb(245, 239, 239); */
     background-color:  rgb(255, 212, 173);
@@ -23,22 +25,22 @@
 
 .right-arrow {
     position: absolute;
-    /* top: 40%; */
-    right: 70px;
+    top: 105%;
+    right: 170px;
     font-size: 3rem;
-    color: rgb(202, 202, 202);
-    /* z-index: 10; */
+    color: black;
+    z-index: 10;
     cursor: pointer;
     user-select: none;
 }
 
 .left-arrow {
     position: absolute;
-    /* top: 45%; */
+    top: 105%;
     left: -25px;
     font-size: 3rem;
-    color: rgb(202, 202, 202);
-    /* z-index: 10; */
+    color: black;
+    z-index: 10;
     cursor: pointer;
     user-select: none;
 }
@@ -56,40 +58,58 @@
 
 .BookingForm {
     box-sizing: border-box;
-    width: 60%;
+    /* width: 60%; */
+    width: 300px;
     position: relative;
-    margin-left: 60%;
+    margin-left: 80%;
 
 }
 
 input {
     margin:5px 0;
     width: 180px;
+    height: 20px;
+    border-radius: 5%;
+    border: 0px;
+    color: transparent white;
 }
 
 button[type=submit] {
-    width: 150px;
-    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    width: 280px;
+    height: 30px;
+    background-color: rgb(236, 236, 236);
+    border: none;
+    color: transparent white;
     font-size: 14px;
-    border-radius: 3px;
-    border: 1px solid black;
+    border-radius: 30px;
     margin: 5px 0;
 }
   
 
-@media screen and (min-width: 600px) {
-    
-    .slider {
-        padding-top: 1vh;
-        height: auto;
+@media screen and (max-width: 400px) {
+    .holder {
+        height: 90vh;
     }
-    
     .image {
-        width: 500px;
+        width: 200px;
+        margin-top: 0%;
+        margin-left: 40%;
     }
 
-    .right-arrow, .left-arrow {
-        top: 50%;
-        color: black;
+    .left-arrow {
+        top: 55%;
+        left: 8%;
+    }
+
+    .right-arrow {
+        top: 55%;
+        right: -70%;
+    }
+    .BookingForm {
+        display: inline;
+        top: 140%;
+        right: 60%;
     }
 }
