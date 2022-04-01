@@ -101,7 +101,7 @@ function Form() {
                 <button type="submit"> Book </button>
                 {/* <button disabled={disable}> Pay </button> */}
                 <PayPalScriptProvider options={{ "client-id": "test" }}>
-                <PayPalButtons disabled={disable} style={{ layout: "horizontal", buttonSize: 'sm', color:"white"}} createOrder={createOrder} onApprove={onApprove} />
+                <PayPalButtons disabled={disable} style={{ layout: "horizontal", buttonSize: 'sm', color:"white"}} createOrder={createOrder} onApprove={onApprove} onError={onError} />
                 </PayPalScriptProvider>
             </form>
             {/*.paypal-button-container */}
