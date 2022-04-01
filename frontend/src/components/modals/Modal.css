@@ -41,12 +41,28 @@
     text-align: center;
 }
 
-input[type=submit] {
+.login-form, .sign-up-form {
+    box-sizing: border-box;
+}
+.login-form input {
+    height: 20px;
+}
+
+.sign-up-form input {
+    height: 20px;
+}
+
+#submit-login, #submit-sign {
     font-family: 'Poppins', sans-serif;
     background-color: white;
-    border: 1px solid black;
+    border: none;
     padding: 5px 5px 5px 5px;
     margin-bottom: 5%;
+}
+
+#submit-login:hover, #submit-sign:hover {
+    cursor: pointer;
+    background-color: rgb(255, 212, 173);
 }
 
 /* .modalContainer .footer {

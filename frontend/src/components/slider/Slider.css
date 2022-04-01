@@ -62,10 +62,9 @@
     width: 300px;
     position: relative;
     margin-left: 80%;
-
 }
 
-input {
+.BookingForm input {
     margin:5px 0;
     width: 180px;
     height: 20px;
@@ -74,7 +73,7 @@ input {
     color: transparent white;
 }
 
-button[type=submit] {
+.BookingForm button[type=submit] {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     width: 280px;

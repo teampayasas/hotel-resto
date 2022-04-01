@@ -34,14 +34,17 @@ export default function Login() {
                 console.log(result)
                 if (result.userRole === "admin") {
                     console.log('Welcome admin');
+                    alert('Welcome admin')
                     RedirectUser()
                     // window.location.replace(<Admin />)
                 } if (result.userRole === "user") {
                     console.log('hola user')
+                    alert(`Welcome ${result.name}`)
                     console.log(`Hola ${result.name}, this is your id ${result._id.$oid}`)
                 }
             } else {
                 console.log('Error logging in :(')
+                alert('Error logging in :(')
             }
         })
     }
@@ -49,10 +52,10 @@ export default function Login() {
     return (
         <form onSubmit={(e) => {handleSubmit(e) }} className='login-form' action="/login" method='POST'>
             <label> Email: </label> <br/>
-            <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} name="email"></input> <br/>
+            <input type="text" placeholder="email@sample.com" value={email} onChange={(e) => setEmail(e.target.value)} name="email"></input> <br/>
             <label> Password: </label> <br/>
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} name="password"></input> <br/>
-            <input type="submit" value="Log In" />
+            <input type="password" placeholder='password' value={password} onChange={(e) => setPassword(e.target.value)} name="password"></input> <br/>
+            <button type="submit" id="submit-login"> Log In </button>
         </form>
     )
 }

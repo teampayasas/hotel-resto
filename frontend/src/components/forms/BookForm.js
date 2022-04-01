@@ -77,7 +77,7 @@ function Form() {
 
     useEffect(() => {
         if(success) {
-            alert('Payment successful :)')
+            alert('Payment and booking successful :)')
         }
     })
 

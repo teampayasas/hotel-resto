@@ -86,16 +86,16 @@ function SignUp() {
     return (
     <form onSubmit={(e) => { handleSubmit(e) }} action="/users" method='POST' className='sign-up-form'>
         <label > Name: </label> <br />
-        <input type="text" value={name} required onChange={(e)=> { handleChange(e) }}/> <br />
+        <input type="text" placeholder='Bruno' value={name} required onChange={(e)=> { handleChange(e) }}/> <br />
         <label> Surname: </label><br />
-        <input type="text" value={surname} required onChange={(e) => { handleSurnameChange(e) }} /><br />
+        <input type="text" placeholder='Madrigal' value={surname} required onChange={(e) => { handleSurnameChange(e) }} /><br />
         <label> Email: </label> <br />
-        <input type="text" value={email} required onChange={(e) => { handleEmailChange(e) }} /><br />
+        <input type="text" placeholder='bruno@mail.com' value={email} required onChange={(e) => { handleEmailChange(e) }} /><br />
         <label> Password: </label><br />
-        <input type="password" value={password} required onChange={(e) => { handlePasswordChange(e) }} /><br />
+        <input type="password" placeholder='Password' value={password} required onChange={(e) => { handlePasswordChange(e) }} /><br />
         <label> Confirm Password: </label><br />
-        <input type="password" value={confPassword} required onChange={(e) => { handleConfPasswordChange(e) }} /><br />
-        <input type="submit" value="Submit" />
+        <input type="password" placeholder='Confirm Password' value={confPassword} required onChange={(e) => { handleConfPasswordChange(e) }} /><br />
+        <button type="submit" id="submit-sign"> Submit </button>
     </form>
   );
 }
