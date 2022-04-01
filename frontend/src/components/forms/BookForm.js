@@ -95,13 +95,13 @@ function Form() {
                 <label for="rooms"> Rooms: </label>
                 <input type="number" placeholder="1" min="1" step="1" value={rooms} required onChange={(e) => setRooms(e.target.value)}></input>
                 <label for="adults"> Adults: </label>
-                <input type="number" placeholder="2" min="1" step="1" value={adults} required onChange={(e) => {setAdults(e.target.value)}}></input> <br/>
+                <input type="number" id='adults' placeholder="2" min="1" step="1" value={adults} required onChange={(e) => {setAdults(e.target.value)}}></input>
                 <label for="kids"> Kids: </label>
                 <input type="number" placeholder="2" min="0" step="0" value={kids} required onChange={(e) => {setKids(e.target.value)}}></input>
                 <button type="submit"> Book </button>
                 {/* <button disabled={disable}> Pay </button> */}
                 <PayPalScriptProvider options={{ "client-id": "test" }}>
-                <PayPalButtons disabled={disable} style={{ layout: "horizontal", buttonSize: 'responsive', color:"silver", shape:"pill"}} createOrder={createOrder} onApprove={onApprove} onError={onError} />
+                <PayPalButtons disabled={disable} style={{ layout: "horizontal", buttonSize: 'responsive', color:"black", shape:"pill"}} createOrder={createOrder} onApprove={onApprove} onError={onError} />
                 </PayPalScriptProvider>
             </form>
             {/*.paypal-button-container */}
