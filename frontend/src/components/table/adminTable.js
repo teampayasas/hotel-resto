@@ -2,11 +2,8 @@ import React,{ useState, useEffect } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import Store from "../alan/Store"
-// import StoreItems from ""
-// import alanBtn from '@alan-ai/alan-sdk-web';
 import useAlan from "../alan/useAlan";
-// import useAlan from "../alan/useAlan";
-// .// import "../alan/modal.css";
+
 const DataTable = () => {
 // DECLARING DATA
     const [users, setUsers] = useState([])
@@ -51,21 +48,32 @@ const DataTable = () => {
     return (
       <div>
       <div className="adminLayout">
-        <div className="Cal">
-          <div className="calendarLayout">
-            <FullCalendar
+        <FullCalendar 
+              className="Cal"
               defaultView="dayGridMonth"
+              height = "350"
               plugins={[dayGridPlugin]}
               events={users.map(user => (
-                  {title: user.name, 
-                    start: user.checkIn, 
-                    end: user.checkOut,
-                    id: user._id.$oid}
-                ))}
+                {title: user.name, 
+                  start: user.checkIn, 
+                  end: user.checkOut,
+                  id: user._id.$oid}
+                  ))}
                 />
-          </div>
+        <Store  
+        className="BookingData"/>
         </div>
-        {/* <div className="tableLayout">
+    </div>
+      
+    )
+  }
+    export default DataTable
+
+
+
+
+
+          {/* <div className="tableLayout">
         {users.length > 0 && (
           <table>
                   <thead>
@@ -98,10 +106,3 @@ const DataTable = () => {
             </table>
             )}
           </div> */}
-          <Store  />
-        </div>
-    </div>
-      
-    )
-  }
-    export default DataTable
