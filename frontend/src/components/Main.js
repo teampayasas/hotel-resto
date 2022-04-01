@@ -25,7 +25,7 @@ function Main() {
         <section className='rooms'>
         {/* https://www.geeksforgeeks.org/css-polaroid-images/ */}
         <h2>WHAT WE OFFER</h2> <br />
-        <figure>
+        <figure id="deluxe">
         <img src="https://cdn.pixabay.com/photo/2016/09/18/03/28/travel-1677347_1280.jpg" alt="room" id="room" className="bedrooms" />        
         <figcaption>
         <i> <b> Deluxe Room </b> </i>
@@ -38,7 +38,7 @@ function Main() {
         {/* </section> */}
 
         {/* <section className='rooms'>  */}
-        <figure>
+        <figure id="villa-card">
         <img src="https://cdn.pixabay.com/photo/2016/10/01/01/53/room-1706801_1280.jpg" alt="room" id="villa" className="bedrooms" />
         <figcaption>
         <i> <b> Deluxe Villa </b> </i>
