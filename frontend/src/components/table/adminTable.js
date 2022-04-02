@@ -22,28 +22,7 @@ const DataTable = () => {
     useEffect(() => {
       fetchData()
     }, [])
-    
-    
-    useAlan({
-      onCommand: function (commandData) {
-        if (commandData.command === "go:back") {
-          // Call client code that will react to the received command
-        }
-      }
-      
-    })
-    // alanBtn({
-    //   key:"e98b154fd089d01807425dd7b3d167e72e956eca572e1d8b807a3e2338fdd0dc/stage",
-    //  }
-    // })
-    // let stringID = ""
-    // console.log(stringID)
-    function EditData(e){
-      let selectedID = e.target.id
-      //  stringID.push(selectedID)
-      useAlan.setVisualState({"data": JSON.stringify(selectedID)})
-
-  }
+    useAlan()
 // USING DATA CALLED TO POPULATE CALENDAR AND TABLE
     return (
       <div>
@@ -68,41 +47,3 @@ const DataTable = () => {
     )
   }
     export default DataTable
-
-
-
-
-
-          {/* <div className="tableLayout">
-        {users.length > 0 && (
-          <table>
-                  <thead>
-                    <tr>
-                    <th>Name</th>
-                    <th>Surname</th>
-                    <th>Num of Rooms</th>
-                    <th>Adults</th>
-                    <th>Kids</th>
-                    <th>Check In</th>
-                    <th>Check Out</th>
-                    <th>Unique ID</th>
-                    </tr>
-                  </thead>
-            {users.map(user => (
-              <tbody key= {user.id}>
-                  <tr>
-                      <td>{user.name}</td>
-                      <td>{user.surname}</td>
-                      <td>{user.rooms}</td>
-                      <td>{user.adults}</td>
-                      <td>{user.kids}</td>
-                      <td>{user.checkIn}</td>
-                      <td>{user.checkOut}</td>
-                      <td>{user._id.$oid}</td>
-                      <button className="openModalBtn" id={user._id.$oid} onClick={(e) => {EditData(e)}}>Edit</button>
-                  </tr>
-              </tbody>
-            ))}
-            </table>
-            )}
-          </div> */}

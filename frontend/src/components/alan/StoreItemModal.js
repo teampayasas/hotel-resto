@@ -1,16 +1,9 @@
-import { useRef } from "react"
 import Modal from "react-modal"
+
 
 Modal.setAppElement("#root")
 
-export default function StoreItemModal({ item, open, closeModal }) {  const quantityRef = useRef()
-
-  function handleSubmit(e) {
-    e.preventDefault()
-
-    const quantity = parseInt(quantityRef.current.value)
-    closeModal()
-  }
+export default function StoreItemModal({ item, open, closeModal }) {   
 
   return (
     <Modal
@@ -49,8 +42,8 @@ export default function StoreItemModal({ item, open, closeModal }) {  const quan
                 <li>Check Out date:{item.checkOut}</li>
                 <li>Customer ID: {item._id.$oid}</li>
               </ul>
-              <p></p>
-              {/* </div> */}
+              <div className="alan-btn"></div>
+              
             </div>
           </div>
         </div>
