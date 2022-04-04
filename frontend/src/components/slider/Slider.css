@@ -3,30 +3,31 @@
 .holder {
     /* background-color: rgb(245, 239, 239); */
     background-color:  rgb(255, 212, 173);
-    height: 78vh;
+    height: 68vh;
     /* padding: 1%; */
 }
 
 .slider {
-    width: 50%;
+    width: 90%;
     position: relative;
     height: 20vh;
     display: flex;
-    /* justify-content: center;
-    align-content: center; */
+    justify-content: center;
+    align-content: center;
 }
 
 .image {
-    padding-top: 50px;
-    width: 400px;
+    /* padding-top: 50px; */
+    width: 500px;
     height: auto;
     border-radius: 10px;
+    vertical-align: middle;
 }
 
 .right-arrow {
     position: absolute;
     top: 105%;
-    right: 170px;
+    right: 200px;
     font-size: 3rem;
     color: black;
     z-index: 10;
@@ -37,7 +38,7 @@
 .left-arrow {
     position: absolute;
     top: 105%;
-    left: -25px;
+    left: 150px;
     font-size: 3rem;
     color: black;
     z-index: 10;
@@ -56,24 +57,25 @@
     transform: scale(1.08);
 }
 
-.BookingForm {
-    box-sizing: border-box;
-    /* width: 60%; */
-    width: 300px;
-    position: relative;
-    margin-left: 80%;
+.myHolder {
+    background-color: rgb(255, 212, 173);
 }
 
-/* #adults {
-    float: right;
-} */
+.BookingForm {    
+    border: 1px solid black;
+    box-sizing: border-box;
+    /* width: 60%; */
+    width: 400px;
+    position: relative;
+    /* margin-left: 80%; */
+    /* text-align: left; */
+}
 
 .BookingForm input {
     text-align: left;
-    /* float: right; */
     float: inline-end;
     margin:5px 0;
-    width: 180px;
+    width: 67%;
     height: 20px;
     border-radius: 5%;
     border: 0px;
@@ -82,7 +84,7 @@
 }
 
 .BookingForm input[type=number] {
-    float: inline-end;
+    /* float: inline-end; */
     /* width: 190px; */
     width: 28px;
     text-align: center;
@@ -91,13 +93,13 @@
 .BookingForm button[type=submit] {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
-    width: 280px;
-    height: 30px;
+    width: 330px;
+    height: 45px;
     background-color: rgb(22, 155, 215);
     color: white;
     border: none;
     color: transparent white;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 30px;
     margin: 5px 0;
 }

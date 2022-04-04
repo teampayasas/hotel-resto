@@ -38,7 +38,7 @@ const ImageSlider = ( {slides} ) => {
         )
         })}
         <section className='holder-form'> 
-            <BookingForm />
+            {/* <BookingForm /> */}
         </section>
       </section>
       </section>

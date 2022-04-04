@@ -101,7 +101,13 @@ footer{
             max-width: 200px;
         }
     }
-}   
+}
+
+.user-data-holder {
+    margin-left: 45%;
+    margin-top: -38%;
+    position: absolute;
+}
 
 @media screen and (max-width: 400px) {
     header{
