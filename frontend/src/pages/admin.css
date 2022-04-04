@@ -1,18 +1,12 @@
-body {
-  text-align: left;
-}
-
 body ul li {
   text-decoration: none;
 }
 
-.wrapper {
-  padding: 1%;
-}
-
 .wrapper .adminLayout {
   padding: 2%;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (60%)[2];
       grid-template-columns: repeat(2, 60%);
   width: 90%;
 }
