@@ -5,20 +5,36 @@ body{
             text-decoration: none;
         }
     }
+    h2, p{
+        margin: 1%;
+    }
+    h2{
+        margin-top: 2%;
+        padding-bottom: 1%;
+    }
+    .dataDisplay{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .dataLayout{
+            min-width: auto;
+            width: 250px;
+            margin: 1%;
+        }
+    }
 }
 .wrapper{
     padding: 1%;
     .adminLayout{
         padding: 2%;
         display: grid;
-        grid-template-columns: repeat(2, 60%);
+        grid-template-columns: repeat(2, 600px);
         width: 90%;
         .Cal{
             grid-column: 1;
         }
         .BookingData{
             grid-column: 2;
-            
             .modalContent{
                 h3{
                     color: #c74747;

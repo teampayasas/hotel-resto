@@ -6,14 +6,43 @@ body ul li {
   text-decoration: none;
 }
 
+body h2, body p {
+  margin: 1%;
+}
+
+body h2 {
+  margin-top: 2%;
+  padding-bottom: 1%;
+}
+
+body .dataDisplay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .dataDisplay .dataLayout {
+  min-width: auto;
+  width: 250px;
+  margin: 1%;
+}
+
 .wrapper {
   padding: 1%;
 }
 
 .wrapper .adminLayout {
   padding: 2%;
+  display: -ms-grid;
   display: grid;
-      grid-template-columns: repeat(2, 60%);
+  -ms-grid-columns: (600px)[2];
+      grid-template-columns: repeat(2, 600px);
   width: 90%;
 }
 

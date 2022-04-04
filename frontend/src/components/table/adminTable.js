@@ -30,7 +30,7 @@ const DataTable = () => {
         <FullCalendar 
               className="Cal"
               defaultView="dayGridMonth"
-              height = "350"
+              height = "700px"
               plugins={[dayGridPlugin]}
               events={users.map(user => (
                 {title: user.name, 

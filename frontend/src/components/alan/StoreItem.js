@@ -16,17 +16,17 @@ export default function StoreItem({ item }) {
   
   return (
     <>
-        <div>
+        <div className="dataLayout">
             <h2>
               {item.name} {item.surname}
             </h2>
             <p>{item._id.$oid}</p>
-          </div>
           <button
             onClick={openModal}
           >
             Details
           </button>
+          </div>
           <div className="alan-btn" item={item}></div>
       <StoreItemModal item={item} open={open} closeModal={closeModal} />
     </>
