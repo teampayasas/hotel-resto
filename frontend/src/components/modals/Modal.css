@@ -1,7 +1,8 @@
 .modalBackground {
-    width: 95%;
-    background-color: rgb(255, 229, 180);
+    width: 100%;
+    /* background-color: rgb(255, 229, 180); */
     position: sticky;
+    z-index: 99;
     display: flex;
     justify-content: center;
     justify-items: center;
