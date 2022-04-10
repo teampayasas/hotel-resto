@@ -25,10 +25,9 @@ const DataTable = () => {
     useAlan()
 // USING DATA CALLED TO POPULATE CALENDAR AND TABLE
     return (
-      <div>
+      <>
       <div className="adminLayout">
         <FullCalendar 
-              className="Cal"
               defaultView="dayGridMonth"
               height = "350"
               plugins={[dayGridPlugin]}
@@ -38,11 +37,14 @@ const DataTable = () => {
                   end: user.checkOut,
                   id: user._id.$oid}
                   ))}
+                  backgroundColor="white"
+                  eventBorderColor="white"
+                  eventBackgroundColor="rgb(255, 212, 173)"
+                  dispaly="background"
                 />
-        <Store  
-        className="BookingData"/>
+        <Store/>
         </div>
-    </div>
+    </>
       
     )
   }

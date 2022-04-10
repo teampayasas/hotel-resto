@@ -12,19 +12,48 @@ body ul li {
 
 .wrapper .adminLayout {
   padding: 2%;
+  display: -ms-grid;
   display: grid;
-      grid-template-columns: repeat(2, 60%);
-  width: 90%;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
 }
 
 .wrapper .adminLayout .Cal {
   -ms-grid-column: 1;
   grid-column: 1;
+  background-color: white;
 }
 
 .wrapper .adminLayout .BookingData {
+  background-color: white;
   -ms-grid-column: 2;
   grid-column: 2;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wrapper .adminLayout .BookingData .bookingData {
+  padding: 2%;
+}
+
+.wrapper .adminLayout .BookingData .bookingData .internalLayout {
+  margin: 0%;
+}
+
+.wrapper .adminLayout .BookingData .bookingData .internalLayout button {
+  height: 45%;
+  padding: 3%;
+  border-radius: 0px;
+  border: none;
+}
+
+.wrapper .adminLayout .BookingData .bookingData .internalLayout button:hover {
+  background-color: #ffb048;
+  color: white;
 }
 
 .wrapper .adminLayout .BookingData .modalContent h3 {
