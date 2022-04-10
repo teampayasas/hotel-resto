@@ -21,7 +21,6 @@ body h2 {
   display: grid;
   -ms-grid-columns: 60% 40%;
       grid-template-columns: 60% 40%;
-  width: 90%;
 }
 
 .wrapper .adminLayout .Cal {
@@ -35,10 +34,6 @@ body h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }

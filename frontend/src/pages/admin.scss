@@ -20,14 +20,15 @@ body{
         padding: 2%;
         display: grid;
         grid-template-columns: 60% 40%;
-        width: 90%;
+        // width: 90%;
         .Cal{
-            grid-column: 1;
+        //    width: 500px;
+           grid-column: 1;
         }
         .dataDisplay{
             grid-column: 2;
             display: flex;
-            flex-direction: column;
+            // flex-direction: column;
             flex-wrap: wrap;
             .bookingData{
                 padding: 2%;
