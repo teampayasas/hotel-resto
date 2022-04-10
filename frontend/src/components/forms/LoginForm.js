@@ -1,12 +1,5 @@
-// Look onto database and match every character that the user has entered.
-// Retrieve from database and check match
-//indexof('@')
-// Regular expression
-//Patter between /`{}$/
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import { Redirect, Route } from 'react-router';
-import Admin from '../../pages/admin.js';
 
 export default function Login() {
 
@@ -37,7 +30,6 @@ export default function Login() {
                     console.log('Welcome admin');
                     alert('Welcome admin')
                     RedirectAdmin()
-                    // window.location.replace(<Admin />)
                 } if (result.userRole === "user") {
                     console.log('hola user')
                     alert(`Welcome ${result.name}`)

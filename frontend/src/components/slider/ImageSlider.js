@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
-import { SliderData } from './SliderData'
-import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa';
 import '../slider/Slider.css'
-import FunDetails from '../HotelFun'
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 //IMAGES
@@ -11,6 +8,20 @@ import Recepcionists from '../../images/receptionists.jpg';
 import Restaurant from '../../images/restaurant.jpg';
 import Hotel from '../../images/hotel.jpg';
 
+function ImageSlider() {
+  return (
+      <AliceCarousel autoPlay autoPlayInterval="2500">
+        <img src={Hotel} className="sliderimg"/>
+        <img src={Recepcionists} className="sliderimg"/>
+        <img src={Restaurant} className="sliderimg"/>
+        <img src={Bedroom} className="sliderimg"/>
+      </AliceCarousel>
+    )
+}
+
+export default ImageSlider
+
+// Previous way for image gallery
 // const ImageSlider = ( {slides} ) => {
 //     const [current, setCurrent] = useState(0);
 //     const length = slides.length;
@@ -25,14 +36,7 @@ import Hotel from '../../images/hotel.jpg';
 //     if(!Array.isArray(slides) || slides.length <= 0) {
 //         return null;
 //     }
-function ImageSlider() {
-  return (
-      <AliceCarousel autoPlay autoPlayInterval="2500">
-        <img src={Hotel} className="sliderimg"/>
-        <img src={Recepcionists} className="sliderimg"/>
-        <img src={Restaurant} className="sliderimg"/>
-        <img src={Bedroom} className="sliderimg"/>
-      </AliceCarousel>
+
       
 
     //   <section className='holder'>
@@ -55,7 +59,3 @@ function ImageSlider() {
     //     </section>
     //   </section>
     //   </section>
-    )
-}
-
-export default ImageSlider

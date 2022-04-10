@@ -1,7 +1,6 @@
 export const SliderData = [
     {
         image: "https://cdn.pixabay.com/photo/2016/11/17/09/28/hotel-1831072_1280.jpg",
-        description: "Hola guapos"
     },
     {
         image: "https://cdn.pixabay.com/photo/2021/02/03/00/10/receptionists-5975962_1280.jpg"

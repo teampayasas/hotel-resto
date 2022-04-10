@@ -1,7 +1,5 @@
 // Functional component
 import React, { useState } from 'react';
-import BookF from './BookForm';
-import SignUp from './SignUpForm';
 import Login from './LoginForm';
 
 function Nav() {

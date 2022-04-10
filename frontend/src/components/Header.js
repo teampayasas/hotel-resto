@@ -1,7 +1,5 @@
 // Functional component
 import React, { useState } from 'react';
-import SignUp from '../components/forms/SignUpForm'
-import Login from '../components/forms/LoginForm';
 import Modal from '../components/modals/Modal'
 import SignModal from '../components/modals/SignModal'
 // Functional component

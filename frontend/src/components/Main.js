@@ -35,9 +35,7 @@ function Main() {
         Price: £100 per night </p> 
         </figcaption>
         </figure>
-        {/* </section> */}
-
-        {/* <section className='rooms'>  */}
+        
         <figure id="villa-card">
         <img src="https://cdn.pixabay.com/photo/2016/10/01/01/53/room-1706801_1280.jpg" alt="room" id="villa" className="bedrooms" />
         <figcaption>

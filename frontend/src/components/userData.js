@@ -17,8 +17,6 @@ function UserData() {
         })
     }
 
-
-
     return (
     <section className='user-data-holder'>
         <button onClick={handleRequest}> Get Data </button>
