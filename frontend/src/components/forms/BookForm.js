@@ -15,6 +15,7 @@ function Form() {
     const [kids, setKids] = useState('');
     const [disable, setDisable] = useState(true);
     const [users, setUsers] = useState([])
+    const [message, setMessage] = useState("Make your booking and join us in Hotel Resto :)")
 
     //Paypal
     // https://www.unimedia.tech/2021/10/09/paypal-checkout-integration-with-react/
@@ -31,13 +32,6 @@ function Form() {
         .then(result => {
             console.log(result.name)
         })
-        // setVisible(true)
-    //     return (
-    //     <section className="success-message">
-    //     <p>
-    //      Hi {name} {surname}, your booking on the {checkIn} to {checkOut} has been successful!
-    //     </p>
-    // </section>
     }
 
     const handleRequest = (e) => {
@@ -58,7 +52,8 @@ function Form() {
         // successMessage()
         // console.log(`Hi ${name} ${surname}, your booking on the ${checkIn} to ${checkOut} has been successful!`);
         alert(`Proceed with payment please`)
-        handleRequest()
+        // handleRequest()
+        
 
         fetch('https://eu-west-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-yjsic/service/bookings/incoming_webhook/PostBooking', {
             headers: {
@@ -113,9 +108,11 @@ function Form() {
     };
 
     useEffect(() => {
+        handleRequest()
         if(success) {
-            alert('Payment and booking successful :)')
-        }
+            // alert('Payment and booking successful :)')
+            setMessage(`Dear ${users.name} ${users.surname}, your booking from ${users.checkIn} to: ${users.checkOut} has been successful!`)
+        } 
     })
 
     return (
@@ -144,18 +141,9 @@ function Form() {
                 <PayPalButtons disabled={disable} style={{ layout: "horizontal", buttonSize: 'responsive', color:"black", shape:"pill"}} createOrder={createOrder} onApprove={onApprove} onError={onError} />
                 </PayPalScriptProvider>
             </form>
-            {/*.paypal-button-container */}
-            {/* <PayPalScriptProvider options={{ "client-id": "test" }}>
-            <PayPalButtons disabled={disable} style={{ layout: "horizontal" }} createOrder={createOrder} onApprove={onApprove} />
-            </PayPalScriptProvider> */}
         </section>
-        {/* <UserData /> */}
         <section className='user-data-holder'>
-        {/* <h3> Congratulations! </h3> */}
-            
-                <p key={users.id}> Dear {users.name} {users.surname}, your booking from {users.checkIn} to: {users.checkOut} has been successful!
-                </p>
-            
+        <p> {message} </p>
         </section>
         </section>
     )
