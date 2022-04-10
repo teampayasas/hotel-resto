@@ -37,9 +37,8 @@ const DataTable = () => {
                   end: user.checkOut,
                   id: user._id.$oid}
                   ))}
-                  backgroundColor="white"
-                  eventBorderColor="white"
-                  eventBackgroundColor="rgb(255, 212, 173)"
+                  // eventBorderColor="rgb(0, 155, 216)"
+                  eventBackgroundColor="rgb(88, 208, 255)"
                   dispaly="background"
                 />
         <Booking/>
