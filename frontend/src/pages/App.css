@@ -153,8 +153,25 @@ footer .footerLayout .fContentLayout {
 
 .user-data-holder {
   margin-left: 45%;
-  margin-top: -38%;
+  margin-top: -25%;
   position: absolute;
+  background-color: white;
+  width: 30%;
+  -webkit-box-shadow: 5px 5px 5px #4d4d4e;
+          box-shadow: 5px 5px 5px #4d4d4e;
+  border-radius: 5%;
+  text-align: center;
+}
+
+.logout {
+  border: none;
+  font-size: 16px;
+  width: 100px;
+}
+
+.logout :hover {
+  background-color: #fdc07a;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 400px) {
