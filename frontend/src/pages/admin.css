@@ -11,72 +11,66 @@ body h2 {
   padding-bottom: 1%;
 }
 
-body .dataDisplay {
-  /* display: -webkit-box;
-  display: -ms-flexbox; */
-  display: flex;
-  /* -webkit-box-orient: horizontal; */
-  /* -webkit-box-direction: normal; */
-      /* -ms-flex-direction: row; */
-          flex-direction: row;
-  /* -ms-flex-wrap: wrap; */
-      flex-wrap: wrap;
-}
-
-body .dataDisplay .dataLayout {
-  min-width: auto;
-  width: 250px;
-  margin: 1%;
+.wrapper {
+  padding: 1%;
 }
 
 .wrapper .adminLayout {
   padding: 2%;
-  /* display: -ms-grid; */
+  display: -ms-grid;
   display: grid;
-  /* -ms-grid-columns: (600px)[2]; */
-      grid-template-columns: repeat(2, 600px);
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
   width: 90%;
 }
 
 .wrapper .adminLayout .Cal {
   -ms-grid-column: 1;
   grid-column: 1;
-  background-color: white;
 }
 
-.wrapper .adminLayout .BookingData {
-  background-color: white;
+.wrapper .adminLayout .dataDisplay {
   -ms-grid-column: 2;
   grid-column: 2;
-  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.wrapper .adminLayout .BookingData .bookingData {
+.wrapper .adminLayout .dataDisplay .bookingData {
   padding: 2%;
+  width: auto;
+  height: 30%;
 }
 
-.wrapper .adminLayout .BookingData .bookingData .internalLayout {
+.wrapper .adminLayout .dataDisplay .bookingData .internalLayout {
   margin: 0%;
 }
 
-.wrapper .adminLayout .BookingData .bookingData .internalLayout button {
-  height: 45%;
+.wrapper .adminLayout .dataDisplay .bookingData button {
+  width: 100%;
+  height: 30%;
   padding: 3%;
   border-radius: 0px;
   border: none;
 }
 
-.wrapper .adminLayout .BookingData .bookingData .internalLayout button:hover {
-  background-color: #ffb048;
+.wrapper .adminLayout .dataDisplay .bookingData button:hover {
+  background-color: #ffa048;
   color: white;
 }
 
-.wrapper .adminLayout .BookingData .modalContent h3 {
+.wrapper .adminLayout .dataDisplay .modalContent {
+  text-align: left;
+}
+
+.wrapper .adminLayout .dataDisplay .modalContent h3 {
   color: #c74747;
 }
 /*# sourceMappingURL=admin.css.map */
