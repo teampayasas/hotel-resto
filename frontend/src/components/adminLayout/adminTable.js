@@ -1,7 +1,7 @@
 import React,{ useState, useEffect } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-import Store from "../alan/Store"
+import Booking from "../alan/Booking"
 import useAlan from "../alan/useAlan";
 
 const DataTable = () => {
@@ -25,10 +25,9 @@ const DataTable = () => {
     useAlan()
 // USING DATA CALLED TO POPULATE CALENDAR AND TABLE
     return (
-      <div>
+      <>
       <div className="adminLayout">
         <FullCalendar 
-              className="Cal"
               defaultView="dayGridMonth"
               height = "700px"
               plugins={[dayGridPlugin]}
@@ -38,11 +37,14 @@ const DataTable = () => {
                   end: user.checkOut,
                   id: user._id.$oid}
                   ))}
+                  backgroundColor="white"
+                  eventBorderColor="white"
+                  eventBackgroundColor="rgb(255, 212, 173)"
+                  dispaly="background"
                 />
-        <Store  
-        className="BookingData"/>
+        <Booking/>
         </div>
-    </div>
+    </>
       
     )
   }
