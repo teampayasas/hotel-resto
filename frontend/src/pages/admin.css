@@ -11,41 +11,16 @@ body h2 {
   padding-bottom: 1%;
 }
 
-<<<<<<< HEAD
-body .dataDisplay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-body .dataDisplay .dataLayout {
-  min-width: auto;
-  width: 250px;
-  margin: 1%;
-=======
 .wrapper {
   padding: 1%;
->>>>>>> a993f994a1d6f1e1d9c295ebfd6213dc27b8e2a1
 }
 
 .wrapper .adminLayout {
   padding: 2%;
   display: -ms-grid;
   display: grid;
-<<<<<<< HEAD
-  -ms-grid-columns: (600px)[2];
-      grid-template-columns: repeat(2, 600px);
-  width: 90%;
-=======
   -ms-grid-columns: 60% 40%;
       grid-template-columns: 60% 40%;
->>>>>>> a993f994a1d6f1e1d9c295ebfd6213dc27b8e2a1
 }
 
 .wrapper .adminLayout .Cal {
