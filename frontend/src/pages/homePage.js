@@ -6,6 +6,7 @@ import Gallery from '../components/slider/ImageSlider';
 import { SliderData } from '../components/slider/SliderData';
 import Content from '../components/Main';
 import Footer from '../components/Footer';
+import FunInfo from '../components/HotelFun'
 //Header
 import Modal from '../components/modals/Modal'
 import SignModal from '../components/modals/SignModal'
@@ -32,6 +33,7 @@ function HomePage() {
         {signModal && <SignModal closeModal={setSignModal} />}
       {/* <Nav /> */}
       <Gallery slides={SliderData} />
+      <FunInfo />
       <Content />
       <Footer />
     </div>
