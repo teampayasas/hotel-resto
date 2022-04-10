@@ -20,11 +20,11 @@ export default function Booking({ items }) {
 
   return (
     <section className="dataDisplay">
-      <table>
+      {/* <table> */}
           {users.map(item => (
             <EachBooking key={item.id} item={item} />
           ))}
-          </table>
+          {/* </table> */}
     </section>
   )
 }
