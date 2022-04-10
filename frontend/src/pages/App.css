@@ -51,7 +51,8 @@ nav {
 
 nav button {
   border: none;
-  padding: 2%;
+  padding: 5%;
+  margin: 5%;
   background-color: white;
 }
 
