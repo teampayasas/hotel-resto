@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { useEffect } from "react";
-import UserData from '../userData';
-// import { application } from "express";
 
 function Form() {
     const [name, setName] = useState('');
@@ -49,11 +47,7 @@ function Form() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // successMessage()
-        // console.log(`Hi ${name} ${surname}, your booking on the ${checkIn} to ${checkOut} has been successful!`);
-        alert(`Proceed with payment please`)
-        // handleRequest()
-        
+        alert(`Proceed with payment please`)        
 
         fetch('https://eu-west-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-yjsic/service/bookings/incoming_webhook/PostBooking', {
             headers: {
