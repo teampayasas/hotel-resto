@@ -26,7 +26,7 @@ header {
 }
 
 header img {
-  max-height: 150px;
+  max-height: 120px;
 }
 
 header nav {
@@ -149,6 +149,12 @@ footer .footerLayout .fContentLayout {
           flex-direction: column;
   padding: 3%;
   max-width: 200px;
+}
+
+.user-data-holder {
+  margin-left: 45%;
+  margin-top: -38%;
+  position: absolute;
 }
 
 @media screen and (max-width: 400px) {

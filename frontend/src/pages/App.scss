@@ -17,7 +17,7 @@ header{
     justify-content: space-around;
     align-items: center;
     img{
-        max-height: 150px;
+        max-height: 120px;
     }
     nav{
         width: 200px;
@@ -101,7 +101,13 @@ footer{
             max-width: 200px;
         }
     }
-}   
+}
+
+.user-data-holder {
+    margin-left: 45%;
+    margin-top: -38%;
+    position: absolute;
+}
 
 @media screen and (max-width: 400px) {
     header{

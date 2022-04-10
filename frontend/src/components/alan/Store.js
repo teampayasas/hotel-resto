@@ -19,7 +19,7 @@ export default function Store({ items }) {
     }, [])
 
   return (
-    <section className="BookingData">
+    <section className="dataDisplay">
           {users.map(item => (
             <StoreItem key={item.id} item={item} />
           ))}

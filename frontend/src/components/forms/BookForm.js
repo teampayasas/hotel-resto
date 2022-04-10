@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { useEffect } from "react";
+import UserData from '../userData';
 // import { application } from "express";
 
 function Form() {
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
+    const [email, setEmail] = useState('');
     const [checkIn, setCheckIn] = useState('');
     const [checkOut, setCheckOut] = useState('');
     const [rooms, setRooms] = useState('');
@@ -31,11 +33,12 @@ function Form() {
                 'Content-Type': 'application/json'
             },
             method: 'POST',
-            body: JSON.stringify({name:name, surname:surname, checkIn:checkIn, checkOut:checkOut, rooms:rooms, adults:adults, kids:kids})
+            body: JSON.stringify({name:name, surname:surname, email:email, checkIn:checkIn, checkOut:checkOut, rooms:rooms, adults:adults, kids:kids})
         })
         setDisable(false)
         setName("")
         setSurname("")
+        setEmail("")
         setCheckIn("")
         setCheckOut("")
         setRooms("") 
@@ -83,12 +86,15 @@ function Form() {
     })
 
     return (
+        <section className="myHolder">
         <section className="BookingForm">
             <form onSubmit={(e) => { handleSubmit(e) }} action="/booking" method='POST' className="submit-booking">
                 <label for="name"> Name: </label> 
                 <input type="text" placeholder="Luisa" value={name} required onChange={(e) => setName(e.target.value)}></input>
                 <label for="surname"> Surname: </label>
                 <input type="text" placeholder="Madrigal" value={surname} required onChange={(e) => setSurname(e.target.value)}></input>
+                <label for="email"> Email: </label>
+                <input type="text" placeholder="strong@madrigal.com" value={email} required onChange={(e) => setEmail(e.target.value)}></input>
                 <label for="date"> Check In: </label>
                 <input type="date" value={checkIn} required onChange={(e) => setCheckIn(e.target.value)}></input>
                 <label for="date"> Check Out: </label>
@@ -109,6 +115,8 @@ function Form() {
             {/* <PayPalScriptProvider options={{ "client-id": "test" }}>
             <PayPalButtons disabled={disable} style={{ layout: "horizontal" }} createOrder={createOrder} onApprove={onApprove} />
             </PayPalScriptProvider> */}
+        </section>
+        <UserData />
         </section>
     )
 }

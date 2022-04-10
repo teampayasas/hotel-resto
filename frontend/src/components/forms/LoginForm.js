@@ -14,7 +14,8 @@ export default function Login() {
     const [password, setPassword] = useState('');
 
     const navigate = useNavigate();
-    function RedirectUser () {navigate("/admin")}
+    function RedirectUser () {navigate("/user")}
+    function RedirectAdmin () {navigate("/admin")}
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -35,11 +36,12 @@ export default function Login() {
                 if (result.userRole === "admin") {
                     console.log('Welcome admin');
                     alert('Welcome admin')
-                    RedirectUser()
+                    RedirectAdmin()
                     // window.location.replace(<Admin />)
                 } if (result.userRole === "user") {
                     console.log('hola user')
                     alert(`Welcome ${result.name}`)
+                    RedirectUser()
                     console.log(`Hola ${result.name}, this is your id ${result._id.$oid}`)
                 }
             } else {

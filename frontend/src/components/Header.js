@@ -1,15 +1,28 @@
 // Functional component
-import React from 'react'
+import React, { useState } from 'react';
+import SignUp from '../components/forms/SignUpForm'
+import Login from '../components/forms/LoginForm';
+import Modal from '../components/modals/Modal'
+import SignModal from '../components/modals/SignModal'
+// Functional component
 import Logo from '../images/hotel-resto-logo.png'
 
 function Header() {
+    //LOGIN    
+    const [openModal, setOpenModal] = useState(false);
+    //SIGN
+    const [signModal, setSignModal] = useState(false);
+    
     return <header> 
         <img src={Logo} alt={'Hotel Logo'} id={'logo'} />
-        <nav id='header-nav'>
-        <a href="#"> Home </a>
-        <a href="#about-us"> About Us </a>
+        <nav>
+            <button className='login' onClick={() => {setOpenModal(true)}}> LOGIN </button>
+            <button className='sign-up' onClick={() => {setSignModal(true)}}> SIGN-UP </button>
         </nav>
-        </header>
+        
+        {openModal && <Modal closeModal={setOpenModal} />}
+        {signModal && <SignModal closeModal={setSignModal} />}
+    </header>
 }
 
 export default Header
