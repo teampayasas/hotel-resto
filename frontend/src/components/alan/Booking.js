@@ -1,6 +1,6 @@
-import StoreItem from "./StoreItem"
+import EachBooking from "./eachBooking"
 import React,{ useState, useEffect } from "react";
-export default function Store({ items }) {
+export default function Booking({ items }) {
   const [users, setUsers] = useState([])
 // FETCHING DATA FROM DATABASE
     const fetchData = () => {
@@ -21,7 +21,7 @@ export default function Store({ items }) {
   return (
     <section className="dataDisplay">
           {users.map(item => (
-            <StoreItem key={item.id} item={item} />
+            <EachBooking key={item.id} item={item} />
           ))}
     </section>
   )

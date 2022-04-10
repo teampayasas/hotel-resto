@@ -1,7 +1,7 @@
 import React,{ useState, useEffect } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-import Store from "../alan/Store"
+import Booking from "../alan/Booking"
 import useAlan from "../alan/useAlan";
 
 const DataTable = () => {
@@ -42,7 +42,7 @@ const DataTable = () => {
                   eventBackgroundColor="rgb(255, 212, 173)"
                   dispaly="background"
                 />
-        <Store/>
+        <Booking/>
         </div>
     </>
       

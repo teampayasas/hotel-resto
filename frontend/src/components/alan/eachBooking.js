@@ -1,5 +1,5 @@
 import { useState } from "react"
-import StoreItemModal from "./StoreItemModal"
+import BookingModal from "../modals/BookingModal"
 
 export default function StoreItem({ item }) {
   const [open, setOpen] = useState(false)
@@ -17,7 +17,7 @@ export default function StoreItem({ item }) {
         <p>{item._id.$oid}</p>
         </div>
         <button onClick={openModal}>Details</button>
-      <StoreItemModal item={item} open={open} closeModal={closeModal} />
+      <BookingModal item={item} open={open} closeModal={closeModal} />
       </div>
   )
 }
