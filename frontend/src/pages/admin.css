@@ -1,5 +1,6 @@
 body ul li {
-  text-decoration: none;
+  list-style-type: none;
+  text-align: left;
 }
 
 body h2, body p {
@@ -11,20 +12,46 @@ body h2 {
   padding-bottom: 1%;
 }
 
-.wrapper .adminLayout {
+.adminContainer {
+  background-color: white;
+}
+
+.adminContainer .adminContentDisplay {
+  color: white;
+  letter-spacing: 1px;
+  padding-bottom: 1px;
+  padding-left: 5%;
+  left: 50px;
+  padding-top: -1px;
+  background-color: #fdc07a;
+}
+
+.adminContainer .adminContentDisplay h1 {
+  font-size: 3em;
+  margin: 0%;
+}
+
+.adminContainer .adminContentDisplay p {
+  margin-top: 0%;
+  margin-left: 5%;
+}
+
+.adminContainer .adminLayout {
   padding: 2%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 60% 40%;
       grid-template-columns: 60% 40%;
+  grid-gap: 15px;
 }
 
-.wrapper .adminLayout .Cal {
+.adminContainer .adminLayout .Cal {
   -ms-grid-column: 1;
   grid-column: 1;
 }
 
-.wrapper .adminLayout .dataDisplay {
+.adminContainer .adminLayout .dataDisplay {
+  padding: 2%;
   -ms-grid-column: 2;
   grid-column: 2;
   display: -webkit-box;
@@ -32,43 +59,44 @@ body h2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.wrapper .adminLayout .dataDisplay .bookingData {
-  min-width: 300px;
-  height: 150px;
-}
-
-.wrapper .adminLayout .dataDisplay .bookingData .internalLayout {
-  margin: 0%;
-}
-
-.wrapper .adminLayout .dataDisplay .bookingData .internalLayout h2 {
-  font-size: 20px;
-}
-
-.wrapper .adminLayout .dataDisplay .bookingData button {
-  width: 80%;
-  height: 20%;
-  padding: 3%;
-  border-radius: 0px;
-  border: none;
-}
-
-.wrapper .adminLayout .dataDisplay .bookingData button:hover {
-  background-color: #ffa048;
   color: white;
 }
 
-.wrapper .adminLayout .dataDisplay .modalContent {
-  text-align: left;
+.adminContainer .adminLayout .dataDisplay .bookingData {
+  background-color: #58d0ff;
+  margin-top: 5%;
+  min-width: 250px;
+  text-align: center;
+  height: 100px;
 }
 
-.wrapper .adminLayout .dataDisplay .modalContent ul {
-  font-size: 11px;
+.adminContainer .adminLayout .dataDisplay .bookingData .internalLayout {
+  padding: 1%;
+  margin: 0%;
 }
 
-.wrapper .adminLayout .dataDisplay .modalContent h3 {
-  color: #c74747;
+.adminContainer .adminLayout .dataDisplay .bookingData .internalLayout h2 {
+  font-size: 19px;
+  letter-spacing: 2px;
+}
+
+.adminContainer .adminLayout .dataDisplay .bookingData .internalLayout p {
+  font-size: 14px;
+}
+
+.adminContainer .adminLayout .dataDisplay .bookingData button {
+  margin-bottom: 1%;
+  width: 100%;
+  height: 40%;
+  padding: 4%;
+  border-radius: 0px;
+  border: none;
+  background-color: #009bd8;
+  font-size: 12px;
+  color: white;
+}
+
+.adminContainer .adminLayout .dataDisplay .bookingData button:hover {
+  background-color: #1d37aa;
 }
 /*# sourceMappingURL=admin.css.map */
