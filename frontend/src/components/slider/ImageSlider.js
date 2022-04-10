@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { SliderData } from './SliderData'
-import {FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa';
 import '../slider/Slider.css'
 import BookingForm from '../forms/BookForm';
+import FunDetails from '../HotelFun'
+
 
 const ImageSlider = ( {slides} ) => {
     const [current, setCurrent] = useState(0);
@@ -39,6 +41,7 @@ const ImageSlider = ( {slides} ) => {
         })}
         <section className='holder-form'> 
             {/* <BookingForm /> */}
+            <FunDetails/>
         </section>
       </section>
       </section>

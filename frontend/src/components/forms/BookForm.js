@@ -14,6 +14,7 @@ function Form() {
     const [adults, setAdults] = useState('');
     const [kids, setKids] = useState('');
     const [disable, setDisable] = useState(true);
+    const [users, setUsers] = useState([])
 
     //Paypal
     // https://www.unimedia.tech/2021/10/09/paypal-checkout-integration-with-react/
@@ -22,10 +23,42 @@ function Form() {
     const [ErrorMessage, setErrorMessage] = useState("");
     const [orderID, setOrderID] = useState(false);
 
+    const successMessage = (e) => {
+        console.log("ola pendejos")
+        fetch('https://eu-west-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-yjsic/service/userData/incoming_webhook/LogInUser')
+        .then(response => {
+            return response.json() })
+        .then(result => {
+            console.log(result.name)
+        })
+        // setVisible(true)
+    //     return (
+    //     <section className="success-message">
+    //     <p>
+    //      Hi {name} {surname}, your booking on the {checkIn} to {checkOut} has been successful!
+    //     </p>
+    // </section>
+    }
+
+    const handleRequest = (e) => {
+        console.log('hola')
+        fetch("https://eu-west-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-yjsic/service/bookings/incoming_webhook/bookingData")
+        .then(response => {
+            return response.json()
+        })
+        .then(result => {
+            console.log(result)
+            let arr = result.slice(-1)[0]
+            setUsers(arr)
+        })
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("This form has been submitted");
+        // successMessage()
+        // console.log(`Hi ${name} ${surname}, your booking on the ${checkIn} to ${checkOut} has been successful!`);
         alert(`Proceed with payment please`)
+        handleRequest()
 
         fetch('https://eu-west-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-yjsic/service/bookings/incoming_webhook/PostBooking', {
             headers: {
@@ -116,7 +149,14 @@ function Form() {
             <PayPalButtons disabled={disable} style={{ layout: "horizontal" }} createOrder={createOrder} onApprove={onApprove} />
             </PayPalScriptProvider> */}
         </section>
-        <UserData />
+        {/* <UserData /> */}
+        <section className='user-data-holder'>
+        {/* <h3> Congratulations! </h3> */}
+            
+                <p key={users.id}> Dear {users.name} {users.surname}, your booking from {users.checkIn} to: {users.checkOut} has been successful!
+                </p>
+            
+        </section>
         </section>
     )
 }

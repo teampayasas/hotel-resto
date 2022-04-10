@@ -12,7 +12,8 @@ function UserData() {
         })
         .then(result => {
             console.log(result)
-            setUsers(result[0])
+            let arr = result.slice(-1)[0]
+            setUsers(arr)
         })
     }
 
@@ -20,8 +21,7 @@ function UserData() {
 
     return (
     <section className='user-data-holder'>
-        {/* <button onClick={handleRequest}> Get Data </button> */}
-        
+        <button onClick={handleRequest}> Get Data </button>
         <h3> Sample Data </h3>
             <ul>
                 <p key={users.id}> Name: {users.name} {users.surname} <br/> 
