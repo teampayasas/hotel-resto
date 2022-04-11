@@ -8,7 +8,7 @@ function Admin() {
     <div className="adminContainer">
     <div  className="adminContentDisplay">
       <h1>Welcome to the new Booking System</h1>
-      <p>Start of by clicking on the blue button on the right hand side and say <i>"Hello"</i>.</p>
+      <p>Start of by clicking on the blue button on the right hand side and say <i>"Hello"</i>. To logout just say <i>"Logout"</i></p>
       </div>
       <DataTable />
       </div>
