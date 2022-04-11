@@ -62,7 +62,7 @@ function SignUp() {
         
         .then((response) => response.json())
         .then((result) => {
-            if (result === null) {
+            // if (result === null) {
                 fetch('https://eu-west-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-yjsic/service/userData/incoming_webhook/InsertUser', {
                     headers: {
                         'Accept': 'application/json',
@@ -70,10 +70,12 @@ function SignUp() {
                     },
                     method: 'POST',
                     body: JSON.stringify({name:name, surname:surname, email:email, password:password, userRole:'user'})
-                })
-            } else {
-                alert('This email is currently in use.')
-            }
+                }) 
+                alert('User signed up!')
+            //} 
+            // else {
+            //     alert('This email is currently in use.')
+            // }
         })
         
         setName('');
